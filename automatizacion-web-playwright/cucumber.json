@@ -1,0 +1,14 @@
+{
+  "default": {
+    "requireModule": ["ts-node/register"],
+    "require": ["support/**/*.ts"],
+    "format": [
+      "progress-bar",
+      "html:cucumber-report/cucumber-report.html",
+      "json:cucumber-report/cucumber-report.json"
+    ],
+    "formatOptions": {
+      "snippetInterface": "async-await"
+    }
+  }
+}

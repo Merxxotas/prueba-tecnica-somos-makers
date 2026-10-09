@@ -3,3 +3,47 @@
 
 # Documentación interna
 documentacion/
+
+# Node.js
+node_modules/
+package-lock.json
+
+# pnpm
+pnpm-lock.yaml
+.pnpm-store/
+
+# Cypress (carpetas de ejecución temporal)
+automatizacion-web-cypress/cypress/videos/
+automatizacion-web-cypress/cypress/screenshots/
+automatizacion-web-cypress/cucumber-report/
+automatizacion-web-cypress/cypress/results/
+
+# Playwright (carpetas de ejecución temporal)
+automatizacion-web-playwright/test-results/
+automatizacion-web-playwright/playwright-report/
+automatizacion-web-playwright/cucumber-report/
+automatizacion-web-playwright/.auth/
+
+# Evidencias - incluir en el repositorio para la prueba técnica
+# (no se excluyen para poder commitear las evidencias)
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# AI checkpoint
+.ai-checkpoint.md
