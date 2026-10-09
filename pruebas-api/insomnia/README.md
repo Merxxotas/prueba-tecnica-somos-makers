@@ -34,15 +34,21 @@ La colección incluye 14 requests organizadas en 4 grupos:
 
 ### Variables de Entorno
 
-La colección usa una variable de entorno:
+La colección usa variables de entorno para la configuración:
 
 ```json
 {
-  "baseURL": "https://reqres.in"
+  "baseURL": "https://reqres.in",
+  "publicKey": "pub_...",
+  "serverKey": "pro_..."
 }
 ```
 
-Esta variable se referencia en todas las requests como `{{ _.baseURL }}`.
+- `baseURL`: URL base de la API ReqRes
+- `publicKey`: API key pública (250 requests/día)
+- `serverKey`: API key de servidor (límite mayor)
+
+**Nota sobre API Keys:** La colección incluye configuración para usar API keys de ReqRes y evitar el límite de 40 requests/día. Las keys se pasan como query parameter `api_key` en cada request. Para obtener tus propias keys, crear cuenta en https://app.reqres.in/sign-up
 
 ### Importar en Insomnia
 
@@ -139,7 +145,16 @@ Esta variable se referencia en todas las requests como `{{ _.baseURL }}`.
 
 ## Evidencias
 
-Los screenshots de las pruebas ejecutadas se encuentran en `evidencias/insomnia/screenshots/`.
+Los screenshots de las pruebas ejecutadas manualmente se encuentran en `evidencias/insomnia/screenshots/`, organizados por grupos:
+
+- **1-Autenticacion/**: 4 screenshots de endpoints de registro y login
+- **2-Recursos/**: 2 screenshots de endpoints de recursos
+- **3-Testing-Performance/**: 1 screenshot de respuesta diferida
+- **4-Usuarios-(CRUD)/**: 7 screenshots de operaciones CRUD
+
+**Total: 14 screenshots** capturados desde Insomnia mostrando requests y responses completos.
+
+Ver documentación completa en `evidencias/insomnia/screenshots/README.md`
 
 ## Notas Importantes
 
