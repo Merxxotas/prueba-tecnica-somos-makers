@@ -1,178 +1,134 @@
-import { Given, When, Then, Before, After, setDefaultTimeout } from '@cucumber/cucumber';
-import { chromium, Browser, BrowserContext, Page } from 'playwright';
-import { expect } from '@playwright/test';
-import { LoginPage } from '../pages/LoginPage';
+import { Before, After, Given, When, Then, Status } from "@cucumber/cucumber";
+import { chromium, Browser, Page, BrowserContext } from "playwright";
+import { LoginPage } from "../pages/LoginPage";
+import { expect } from "@playwright/test";
+import * as fs from "fs";
+import * as path from "path";
 
-// Aumentar el timeout por defecto a 60 segundos para performance_glitch_user
-setDefaultTimeout(60 * 1000);
-
-// Variables globales para mantener el estado del navegador
 let browser: Browser;
 let context: BrowserContext;
 let page: Page;
 let loginPage: LoginPage;
 
-/**
- * Hook que se ejecuta antes de cada escenario
- * Inicializa el navegador y el contexto
- */
-Before(async function() {
-  browser = await chromium.launch({ headless: true });
+// Directorio para screenshots de evidencias
+const evidenciasDir = path.join(process.cwd(), 'evidencias', 'playwright', 'screenshots');
+
+// Asegurar que existe el directorio
+if (!fs.existsSync(evidenciasDir)) {
+  fs.mkdirSync(evidenciasDir, { recursive: true });
+}
+
+// Hook BEFORE: Configurar navegador antes de cada escenario
+Before(async function () {
+  browser = await chromium.launch({ 
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
+  });
   context = await browser.newContext({
+    baseURL: 'https://www.saucedemo.com',
     viewport: { width: 1280, height: 720 },
-    baseURL: 'https://www.saucedemo.com'
+    recordVideo: {
+      dir: path.join(process.cwd(), 'evidencias', 'playwright', 'videos'),
+      size: { width: 1280, height: 720 }
+    }
   });
   page = await context.newPage();
   loginPage = new LoginPage(page);
 });
 
-/**
- * Hook que se ejecuta después de cada escenario
- * Cierra el navegador y limpia recursos
- */
-After(async function() {
-  await page?.close();
-  await context?.close();
-  await browser?.close();
+// Hook AFTER: Limpiar y capturar evidencia en caso de fallo
+After(async function (scenario: any) {
+  // Capturar screenshot si el escenario falló
+  if (scenario.result?.status === Status.FAILED) {
+    const screenshotName = `FAILED-${scenario.pickle.name.replace(/\s+/g, '_')}-${Date.now()}.png`;
+    const screenshotPath = path.join(evidenciasDir, screenshotName);
+    await page.screenshot({ path: screenshotPath, fullPage: true });
+    console.log(`📸 Screenshot de fallo guardado: ${screenshotName}`);
+  }
+  
+  await context.close();
+  await browser.close();
 });
 
-// ==================== STEPS DE NAVEGACIÓN ====================
+// ========================================
+// Pasos GIVEN (Precondiciones)
+// ========================================
 
-Given('que estoy en la página de login de SauceDemo', async function() {
+Given("navego a la página de login de SauceDemo", async function () {
   await loginPage.goto();
-  await expect(page).toHaveURL('https://www.saucedemo.com/');
+  
+  // Capturar screenshot de la página inicial
+  const screenshotName = `01-pagina-login-${Date.now()}.png`;
+  await page.screenshot({ 
+    path: path.join(evidenciasDir, screenshotName),
+    fullPage: true 
+  });
 });
 
-Given('navego a la página de login de SauceDemo', async function() {
-  await loginPage.goto();
-  await expect(page).toHaveURL('https://www.saucedemo.com/');
-});
+// ========================================
+// Pasos WHEN (Acciones)
+// ========================================
 
-// ==================== STEPS DE ACCIÓN ====================
-
-When('ingreso el usuario {string}', async function(username: string) {
+When("ingreso el nombre de usuario {string}", async function (username: string) {
   await loginPage.usernameInput.fill(username);
 });
 
-When('ingreso el nombre de usuario {string}', async function(username: string) {
-  await loginPage.usernameInput.fill(username);
-});
-
-When('ingreso la contraseña {string}', async function(password: string) {
+When("ingreso la contraseña {string}", async function (password: string) {
   await loginPage.passwordInput.fill(password);
 });
 
-When('hago clic en el botón de login', async function() {
+When("hago clic en el botón de login", async function () {
+  // Capturar antes de hacer clic
+  const screenshotName = `02-antes-click-login-${Date.now()}.png`;
+  await page.screenshot({ 
+    path: path.join(evidenciasDir, screenshotName) 
+  });
+  
   await loginPage.loginButton.click();
-  // Esperar un poco más para usuarios con glitch de rendimiento
+  
+  // Esperar navegación o mensaje de error
   await page.waitForTimeout(1000);
-});
-
-When('ingreso credenciales válidas', async function() {
-  await loginPage.login('standard_user', 'secret_sauce');
-});
-
-When('ingreso el usuario {string} y la contraseña {string}', async function(username: string, password: string) {
-  await loginPage.login(username, password);
-});
-
-When('dejo el campo de usuario vacío', async function() {
-  await loginPage.usernameInput.clear();
-});
-
-When('dejo el campo de contraseña vacío', async function() {
-  await loginPage.passwordInput.clear();
-});
-
-When('dejo ambos campos vacíos', async function() {
-  await loginPage.clearFields();
-});
-
-// ==================== STEPS DE VERIFICACIÓN ====================
-
-Then('debería ver la página de productos', async function() {
-  // Esperar hasta 30 segundos a que aparezca el inventario (performance_glitch_user es muy lento)
-  try {
-    await page.waitForSelector('.inventory_list', { timeout: 30000 });
-  } catch (e) {
-    // Si no aparece, capturar para debug
-    console.log('URL actual:', page.url());
-  }
   
+  // Capturar después del clic
+  const screenshotNameAfter = `03-despues-click-login-${Date.now()}.png`;
+  await page.screenshot({ 
+    path: path.join(evidenciasDir, screenshotNameAfter),
+    fullPage: true 
+  });
+});
+
+// ========================================
+// Pasos THEN (Aserciones)
+// ========================================
+
+Then("debería ser redirigido a la página de inventario", async function () {
+  await expect(page).toHaveURL(/inventory.html/);
+});
+
+Then("debería ver el título de productos", async function () {
   const isOnProducts = await loginPage.isOnProductsPage();
   expect(isOnProducts).toBe(true);
-  await expect(page).toHaveURL(/.*inventory\.html/);
-});
-
-Then('debería ser redirigido a la página de inventario', async function() {
-  // Esperar hasta 30 segundos a que aparezca el inventario (performance_glitch_user es muy lento)
-  try {
-    await page.waitForSelector('.inventory_list', { timeout: 30000 });
-  } catch (e) {
-    // Si no aparece, capturar screenshot para debug
-    console.log('URL actual:', page.url());
-  }
   
-  const isOnProducts = await loginPage.isOnProductsPage();
-  expect(isOnProducts).toBe(true);
-  await expect(page).toHaveURL(/.*inventory\.html/);
+  // Capturar evidencia de éxito
+  const screenshotName = `SUCCESS-pagina-inventario-${Date.now()}.png`;
+  await page.screenshot({ 
+    path: path.join(evidenciasDir, screenshotName),
+    fullPage: true 
+  });
 });
 
-Then('debería permanecer en la página de login', async function() {
-  await expect(page).toHaveURL('https://www.saucedemo.com/');
-  const isOnProducts = await loginPage.isOnProductsPage();
-  expect(isOnProducts).toBe(false);
-});
-
-Then('debería ver el título de productos', async function() {
-  const title = page.locator('.title');
-  await expect(title).toBeVisible();
-  await expect(title).toHaveText('Products');
-});
-
-Then('debería ver el mensaje de error {string}', async function(expectedMessage: string) {
-  const isErrorVisible = await loginPage.isErrorVisible();
-  expect(isErrorVisible).toBe(true);
+Then("debería ver un mensaje de error {string}", async function (expectedMessage: string) {
+  const errorMessage = await loginPage.getErrorMessage();
+  expect(errorMessage).toContain(expectedMessage);
   
-  const errorText = await loginPage.getErrorMessage();
-  expect(errorText).toContain(expectedMessage);
+  // Capturar evidencia del error
+  const screenshotName = `ERROR-mensaje-error-${Date.now()}.png`;
+  await page.screenshot({ 
+    path: path.join(evidenciasDir, screenshotName) 
+  });
 });
 
-Then('debería ver un mensaje de error {string}', async function(expectedMessage: string) {
-  const isErrorVisible = await loginPage.isErrorVisible();
-  expect(isErrorVisible).toBe(true);
-  
-  const errorText = await loginPage.getErrorMessage();
-  expect(errorText).toContain(expectedMessage);
-});
-
-Then('no debería poder acceder a la página de productos', async function() {
-  // Verificar que seguimos en la página de login
-  await expect(page).toHaveURL('https://www.saucedemo.com/');
-  
-  // Verificar que NO estamos en la página de productos
-  const isOnProducts = await loginPage.isOnProductsPage();
-  expect(isOnProducts).toBe(false);
-});
-
-Then('debería ver un mensaje indicando que el usuario está bloqueado', async function() {
-  const errorText = await loginPage.getErrorMessage();
-  expect(errorText).toContain('locked out');
-});
-
-Then('debería ver un mensaje de error genérico', async function() {
-  const isErrorVisible = await loginPage.isErrorVisible();
-  expect(isErrorVisible).toBe(true);
-  
-  const errorText = await loginPage.getErrorMessage();
-  expect(errorText.length).toBeGreaterThan(0);
-});
-
-Then('el sistema debería rechazar las credenciales', async function() {
-  // Verificar que hay un mensaje de error
-  const isErrorVisible = await loginPage.isErrorVisible();
-  expect(isErrorVisible).toBe(true);
-  
-  // Verificar que seguimos en la página de login
-  await expect(page).toHaveURL('https://www.saucedemo.com/');
+Then("debería permanecer en la página de login", async function () {
+  await expect(page).toHaveURL(/saucedemo.com/);
+  await expect(page).not.toHaveURL(/inventory.html/);
 });

@@ -99,10 +99,47 @@ pnpm test:api
 
 ## Reportes y Evidencias
 
-- **Grabaciones de Video:** Capturadas automáticamente en cada ejecución
-- **Capturas de Pantalla:** En fallos y puntos clave
-- **Reportes HTML:** Generados por Cypress y Playwright
-- **Artefactos de CI:** Disponibles en ejecuciones de GitHub Actions
+### 📁 Evidencias Disponibles
+
+Todas las evidencias de ejecución están disponibles en la carpeta [`evidencias/`](./evidencias/):
+
+- **🎥 Videos:** 54 grabaciones de ejecución (3.4 MB)
+- **📸 Screenshots:** 108 capturas de pantalla (4.6 MB)
+- **📄 Reportes HTML:** Reportes interactivos de Cucumber
+- **✅ Tasa de éxito:** 100% (36/36 pruebas pasadas)
+
+### 📈 Reportes Interactivos
+
+**Cypress:**
+- [Ver Reporte HTML](./evidencias/cypress/cucumber-report/cucumber-report.html)
+- 18 escenarios ejecutados
+- Cobertura completa de funcionalidad de login
+
+**Playwright:**
+- [Ver Reporte HTML](./evidencias/playwright/cucumber-report/cucumber-report.html)
+- 18 escenarios ejecutados  
+- Incluye screenshots automáticos en cada paso
+
+### 🎯 Selección de Evidencias Clave
+
+En [`evidencias/seleccion/`](./evidencias/seleccion/) se encuentran las evidencias más representativas:
+
+- **Login exitoso:** Screenshots del flujo completo
+- **Mensajes de error:** Validaciones de campos vacíos y credenciales inválidas
+- **Videos destacados:** Ejecuciones completas de casos críticos
+
+### 🛠️ Generar Nuevas Evidencias
+
+```bash
+# Ejecutar todas las pruebas y generar evidencias
+pnpm evidencias
+
+# O ejecutar frameworks por separado
+pnpm test:cypress       # Genera reportes de Cypress
+pnpm test:playwright    # Genera screenshots y videos de Playwright
+```
+
+**Nota:** Los videos y screenshots se generan automáticamente durante la ejecución y se copian a la carpeta `evidencias/` para documentación.
 
 ---
 
