@@ -17,8 +17,9 @@ Este repositorio contiene la solución completa para la prueba técnica de QA Fu
 
 ### 2. Testing de APIs (Insomnia + Automation)
 - **API:** [ReqRes](https://reqres.in/api/)
-- **Herramientas:** Insomnia + inso-cli + scripts automatizados
+- **Herramientas:** Insomnia + Script de automatización Node.js
 - **Cobertura:** 14 requests (CRUD usuarios, recursos, autenticación, performance)
+- **Automatización:** 100% (14/14 pruebas pasadas)
 - **Colección:** `pruebas-api/insomnia/reqres-api-collection.json`
 - Carpeta: `pruebas-api/`
 
@@ -51,14 +52,17 @@ prueba-tecnica-somos-makers/
 ├── pruebas-api/
 │   └── insomnia/                   # Colección completa de API ReqRes
 │       ├── reqres-api-collection.json  # 14 requests organizados
-│       └── README.md               # Documentación de la colección
+│       ├── README.md               # Documentación de la colección
+│       └── AUTOMATION.md           # Guía de automatización
 ├── pruebas-funcionales/            # Documentación MakersPay
 ├── evidencias/                     # Videos, screenshots y reportes
 │   ├── cypress/                    # Evidencias de Cypress
 │   ├── playwright/                 # Evidencias de Playwright
-│   ├── insomnia/                   # Evidencias de API
+│   ├── insomnia/                   # Evidencias de API + reportes JSON
 │   └── seleccion/                  # Evidencias destacadas
 ├── scripts/                        # Scripts de utilidad
+│   ├── test-api.js                 # Automatización de pruebas de API
+│   └── capturar-evidencias.js      # Generación de evidencias
 ├── .github/
 │   └── workflows/                  # Pipelines de CI/CD
 └── README.md
@@ -97,7 +101,21 @@ pnpm test:playwright       # Modo headless
 pnpm test:playwright:ui    # Interfaz interactiva
 ```
 
-**Colección de API (Insomnia):**
+**Pruebas de API (Automatizadas):**
+```bash
+pnpm test:api
+```
+
+Esto ejecuta:
+- Los 14 requests de la colección de Insomnia
+- Validación automática de códigos de estado HTTP
+- Generación de reporte JSON en `evidencias/insomnia/test-report.json`
+- Output con colores en consola
+- Exit code 0 (todas pasaron) o 1 (alguna falló)
+
+Ver documentación completa en [`pruebas-api/insomnia/AUTOMATION.md`](./pruebas-api/insomnia/AUTOMATION.md)
+
+**Colección de API (Insomnia - Manual):**
 
 1. Importar colección en Insomnia:
    - Abrir Insomnia
