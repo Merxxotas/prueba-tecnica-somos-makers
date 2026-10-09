@@ -1,6 +1,7 @@
 import { Before, After, Given, When, Then, Status } from "@cucumber/cucumber";
 import { chromium, Browser, Page, BrowserContext } from "playwright";
 import { LoginPage } from "../pages/LoginPage";
+import { submitLogin } from "../loginActions";
 import { expect } from "@playwright/test";
 import * as fs from "fs";
 import * as path from "path";
@@ -20,8 +21,8 @@ if (!fs.existsSync(evidenciasDir)) {
 
 // Hook BEFORE: Configurar navegador antes de cada escenario
 Before(async function () {
-  browser = await chromium.launch({ 
-    headless: true,
+  browser = await chromium.launch({
+    headless: process.env.PW_HEADED !== '1',
     args: ['--no-sandbox', '--disable-setuid-sandbox']
   });
   context = await browser.newContext({
@@ -43,7 +44,7 @@ After(async function (scenario: any) {
     const screenshotName = `FAILED-${scenario.pickle.name.replace(/\s+/g, '_')}-${Date.now()}.png`;
     const screenshotPath = path.join(evidenciasDir, screenshotName);
     await page.screenshot({ path: screenshotPath, fullPage: true });
-    console.log(`📸 Screenshot de fallo guardado: ${screenshotName}`);
+    console.log(`Screenshot de fallo guardado: ${screenshotName}`);
   }
   
   await context.close();
@@ -77,17 +78,14 @@ When("ingreso la contraseña {string}", async function (password: string) {
   await loginPage.passwordInput.fill(password);
 });
 
-When("hago clic en el botón de login", { timeout: 10000 }, async function () {
+When("hago clic en el botón de login", { timeout: 20000 }, async function () {
   // Capturar antes de hacer clic
   const screenshotName = `02-antes-click-login-${Date.now()}.png`;
   await page.screenshot({ 
     path: path.join(evidenciasDir, screenshotName) 
   });
   
-  await loginPage.loginButton.click();
-  
-  // Esperar navegación o mensaje de error (aumentado para performance_glitch_user)
-  await page.waitForTimeout(3000);
+  await submitLogin(loginPage);
   
   // Capturar después del clic
   const screenshotNameAfter = `03-despues-click-login-${Date.now()}.png`;

@@ -11,6 +11,7 @@ export class LoginPage {
   readonly loginButton: Locator;
   readonly errorMessage: Locator;
   readonly errorButton: Locator;
+  readonly inventoryList: Locator;
 
   /**
    * Constructor de la clase LoginPage
@@ -23,6 +24,7 @@ export class LoginPage {
     this.loginButton = page.locator('[data-test="login-button"]');
     this.errorMessage = page.locator('[data-test="error"]');
     this.errorButton = page.locator('[data-test="error-button"]');
+    this.inventoryList = page.locator('.inventory_list');
   }
 
   /**
@@ -64,7 +66,7 @@ export class LoginPage {
    * @returns Promise con booleano indicando si el login fue exitoso
    */
   async isOnProductsPage(): Promise<boolean> {
-    return await this.page.locator('.inventory_list').isVisible();
+    return await this.inventoryList.isVisible();
   }
 
   /**

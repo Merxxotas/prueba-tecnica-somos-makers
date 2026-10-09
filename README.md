@@ -97,9 +97,13 @@ pnpm test:cypress:open     # Interfaz interactiva
 
 **Playwright:**
 ```bash
-pnpm test:playwright       # Modo headless
-pnpm test:playwright:ui    # Interfaz interactiva
+pnpm test:playwright            # Cucumber headless con reporte HTML y JSON
+pnpm test:playwright:headed     # Cucumber con navegador visible
+pnpm test:playwright:ui         # Playwright UI con los 18 escenarios de login
+pnpm test:playwright:regression # Regresión local de la espera de login, sin red
 ```
+
+`pnpm test:playwright:ui` genera los casos nativos desde `automatizacion-web-playwright/features/login.feature` y abre la interfaz interactiva de Playwright. La lista se mantiene sincronizada con los escenarios Gherkin existentes. `pnpm test:playwright` conserva el runner Cucumber headless y `pnpm test:playwright:headed` ejecuta ese mismo runner con Chromium visible.
 
 **Pruebas de API (Automatizadas):**
 ```bash

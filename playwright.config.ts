@@ -1,11 +1,17 @@
 import { defineConfig, devices } from '@playwright/test';
+import { defineBddConfig } from 'playwright-bdd';
+
+const bddTestDir = defineBddConfig({
+  features: './automatizacion-web-playwright/features/**/*.feature',
+  steps: './automatizacion-web-playwright/ui/**/*.ts',
+});
 
 /**
  * Configuración de Playwright para pruebas automatizadas
  * @see https://playwright.dev/docs/test-configuration
  */
 export default defineConfig({
-  testDir: './automatizacion-web-playwright',
+  testDir: bddTestDir,
   
   // Tiempo máximo de espera para cada prueba
   timeout: 30 * 1000,

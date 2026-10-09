@@ -9,7 +9,6 @@ node_modules/
 package-lock.json
 
 # pnpm
-pnpm-lock.yaml
 .pnpm-store/
 
 # Cypress (carpetas de ejecución temporal)
@@ -19,10 +18,12 @@ automatizacion-web-cypress/cucumber-report/
 automatizacion-web-cypress/cypress/results/
 
 # Playwright (carpetas de ejecución temporal)
+/test-results/
 automatizacion-web-playwright/test-results/
 automatizacion-web-playwright/playwright-report/
 automatizacion-web-playwright/cucumber-report/
 automatizacion-web-playwright/.auth/
+.features-gen/
 
 # Evidencias - incluir en el repositorio para la prueba técnica
 # (no se excluyen para poder commitear las evidencias)
