@@ -23,7 +23,9 @@ const collectionPath = path.join(__dirname, '..', 'pruebas-api', 'insomnia', 're
 const collection = JSON.parse(fs.readFileSync(collectionPath, 'utf8'));
 
 // Extraer configuración
-const baseURL = collection.resources.find(r => r._id === 'env_base')?.data?.baseURL || 'https://reqres.in';
+const baseEnv = collection.resources.find(r => r._id === 'env_base');
+const baseURL = baseEnv?.data?.baseURL || 'https://reqres.in';
+const apiKey = baseEnv?.data?.publicKey || '';
 const requests = collection.resources.filter(r => r._type === 'request');
 const folders = collection.resources.filter(r => r._type === 'request_group');
 
@@ -40,6 +42,9 @@ const results = [];
 console.log(`${colors.cyan}==============================================`);
 console.log(`API Testing - ReqRes Collection`);
 console.log(`Base URL: ${baseURL}`);
+if (apiKey) {
+  console.log(`API Key: ${apiKey.substring(0, 15)}...`);
+}
 console.log(`Total Requests: ${requests.length}`);
 console.log(`==============================================\n${colors.reset}`);
 
@@ -52,6 +57,12 @@ async function executeRequest(request) {
   try {
     // Resolver URL reemplazando variables
     let url = request.url.replace('{{ _.baseURL }}', baseURL);
+    
+    // Agregar API key como query parameter si existe
+    if (apiKey) {
+      const separator = url.includes('?') ? '&' : '?';
+      url = `${url}${separator}api_key=${apiKey}`;
+    }
     
     // Preparar opciones de fetch
     const options = {
