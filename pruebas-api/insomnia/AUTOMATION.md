@@ -137,12 +137,12 @@ Esto permite integración directa con pipelines de CI/CD.
 
 ## Ventajas sobre inso-cli
 
-- ✅ **Sin dependencias externas**: Solo Node.js nativo
-- ✅ **Personalizable**: Fácil de extender con más validaciones
-- ✅ **Reportes detallados**: Output formateado y JSON estructurado
-- ✅ **Control total**: Manejo completo de requests y respuestas
-- ✅ **Integración simple**: Compatible con cualquier CI/CD
-- ✅ **Debugging**: Acceso completo a request/response para análisis
+- **Sin dependencias externas**: Solo Node.js nativo
+- **Personalizable**: Fácil de extender con más validaciones
+- **Reportes detallados**: Output formateado y JSON estructurado
+- **Control total**: Manejo completo de requests y respuestas
+- **Integración simple**: Compatible con cualquier CI/CD
+- **Debugging**: Acceso completo a request/response para análisis
 
 ## Extensiones Futuras
 
