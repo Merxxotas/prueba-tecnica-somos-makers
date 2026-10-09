@@ -1,0 +1,41 @@
+{
+  "name": "prueba-tecnica-somos-makers",
+  "version": "1.0.0",
+  "description": "Prueba técnica QA Full Stack - Automatización Web, API Testing, y Testing Funcional",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test command specified\" && exit 1",
+    "test:cypress": "cypress run",
+    "test:cypress:open": "cypress open",
+    "cypress:verify": "cypress verify"
+  },
+  "keywords": [
+    "cypress",
+    "playwright",
+    "typescript",
+    "cucumber",
+    "gherkin",
+    "bdd",
+    "testing",
+    "qa",
+    "automation"
+  ],
+  "author": "Merxxotas",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Merxxotas/prueba-tecnica-somos-makers.git"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^28.0.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.8",
+    "@cypress/webpack-preprocessor": "^8.0.0",
+    "@types/node": "^26.6.4",
+    "cypress": "^16.1.1",
+    "typescript": "^7.0.2"
+  }
+}
