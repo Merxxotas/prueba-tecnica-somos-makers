@@ -18,7 +18,8 @@ Este repositorio contiene la solución completa para la prueba técnica de QA Fu
 ### 2. Testing de APIs (Insomnia + Automation)
 - **API:** [ReqRes](https://reqres.in/api/)
 - **Herramientas:** Insomnia + inso-cli + scripts automatizados
-- **Cobertura:** Operaciones CRUD + casos adicionales
+- **Cobertura:** 14 requests (CRUD usuarios, recursos, autenticación, performance)
+- **Colección:** `pruebas-api/insomnia/reqres-api-collection.json`
 - Carpeta: `pruebas-api/`
 
 ### 3. Testing Funcional (MakersPay)
@@ -48,10 +49,16 @@ prueba-tecnica-somos-makers/
 ├── automatizacion-web-cypress/      # Smoke tests Cypress + Gherkin
 ├── automatizacion-web-playwright/   # Smoke tests Playwright + Gherkin
 ├── pruebas-api/
-│   ├── insomnia/                   # Colecciones de Insomnia
-│   └── automatizadas/              # Scripts automatizados de API
+│   └── insomnia/                   # Colección completa de API ReqRes
+│       ├── reqres-api-collection.json  # 14 requests organizados
+│       └── README.md               # Documentación de la colección
 ├── pruebas-funcionales/            # Documentación MakersPay
-├── documentacion/                  # Documentación técnica
+├── evidencias/                     # Videos, screenshots y reportes
+│   ├── cypress/                    # Evidencias de Cypress
+│   ├── playwright/                 # Evidencias de Playwright
+│   ├── insomnia/                   # Evidencias de API
+│   └── seleccion/                  # Evidencias destacadas
+├── scripts/                        # Scripts de utilidad
 ├── .github/
 │   └── workflows/                  # Pipelines de CI/CD
 └── README.md
@@ -90,10 +97,20 @@ pnpm test:playwright       # Modo headless
 pnpm test:playwright:ui    # Interfaz interactiva
 ```
 
-**Pruebas de API (Insomnia):**
-```bash
-pnpm test:api
-```
+**Colección de API (Insomnia):**
+
+1. Importar colección en Insomnia:
+   - Abrir Insomnia
+   - Create → Import From → File
+   - Seleccionar `pruebas-api/insomnia/reqres-api-collection.json`
+
+2. La colección incluye:
+   - 7 requests CRUD de usuarios
+   - 2 requests de recursos
+   - 4 requests de autenticación (registro/login)
+   - 1 request de testing de performance
+
+Ver documentación completa en [`pruebas-api/insomnia/README.md`](./pruebas-api/insomnia/README.md)
 
 ---
 
