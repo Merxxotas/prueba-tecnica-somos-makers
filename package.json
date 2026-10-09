@@ -7,7 +7,11 @@
     "test": "echo \"Error: no test command specified\" && exit 1",
     "test:cypress": "cypress run",
     "test:cypress:open": "cypress open",
-    "cypress:verify": "cypress verify"
+    "cypress:verify": "cypress verify",
+    "test:playwright": "cucumber-js automatizacion-web-playwright/features --require-module tsx --require 'automatizacion-web-playwright/support/**/*.ts' --format progress-bar --format html:automatizacion-web-playwright/cucumber-report/cucumber-report.html --format json:automatizacion-web-playwright/cucumber-report/cucumber-report.json",
+    "test:playwright:headed": "cucumber-js automatizacion-web-playwright/features --require-module tsx --require 'automatizacion-web-playwright/support/**/*.ts' --format progress-bar",
+    "playwright:install": "playwright install chromium",
+    "evidencias": "node scripts/capturar-evidencias.js"
   },
   "keywords": [
     "cypress",
@@ -33,9 +37,14 @@
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^28.0.1",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.8",
+    "@cucumber/cucumber": "^13.3.0",
     "@cypress/webpack-preprocessor": "^8.0.0",
+    "@playwright/test": "^1.64.0",
     "@types/node": "^26.6.4",
     "cypress": "^16.1.1",
+    "playwright": "^1.64.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.23.15",
     "typescript": "^7.0.2"
   }
 }

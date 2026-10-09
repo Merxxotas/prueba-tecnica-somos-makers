@@ -1,0 +1,2086 @@
+[
+  {
+    "description": "  Como usuario de SauceDemo\n  Quiero poder iniciar sesión con credenciales válidas\n  Para poder acceder a la página de inventario",
+    "elements": [
+      {
+        "description": "",
+        "id": "funcionalidad-de-login-en-saucedemo;login-exitoso-con-credenciales-válidas",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "Login exitoso con credenciales válidas",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 53525684
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 654009650
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "navego a la página de login de SauceDemo",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:57"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 10210790
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "ingreso el nombre de usuario \"standard_user\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:72"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 2899787
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "ingreso la contraseña \"secret_sauce\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:76"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1133928811
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "hago clic en el botón de login",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:80"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 4131649
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "debería ser redirigido a la página de inventario",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:104"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 78879464
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "debería ver el título de productos",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:108"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 108604115
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 13
+          },
+          {
+            "name": "@obligatorio",
+            "line": 13
+          },
+          {
+            "name": "@positivo",
+            "line": 13
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "funcionalidad-de-login-en-saucedemo;login-fallido-con-contraseña-incorrecta",
+        "keyword": "Scenario",
+        "line": 22,
+        "name": "Login fallido con contraseña incorrecta",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 37718682
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 573333549
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "navego a la página de login de SauceDemo",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:57"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 6231969
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 23,
+            "name": "ingreso el nombre de usuario \"standard_user\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:72"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 2686755
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "ingreso la contraseña \"contraseña_incorrecta\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:76"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1090307120
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "hago clic en el botón de login",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:80"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 32216008
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "debería ver un mensaje de error \"Epic sadface: Username and password do not match any user in this service\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:120"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 3610227
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "debería permanecer en la página de login",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:131"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 47097123
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 21
+          },
+          {
+            "name": "@obligatorio",
+            "line": 21
+          },
+          {
+            "name": "@negativo",
+            "line": 21
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "funcionalidad-de-login-en-saucedemo;validación-de-campo-de-nombre-de-usuario-vacío",
+        "keyword": "Scenario",
+        "line": 30,
+        "name": "Validación de campo de nombre de usuario vacío",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 37013984
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 594539690
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "navego a la página de login de SauceDemo",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:57"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 6613169
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 31,
+            "name": "ingreso la contraseña \"secret_sauce\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:76"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1093359236
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 32,
+            "name": "hago clic en el botón de login",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:80"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 33163394
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 33,
+            "name": "debería ver un mensaje de error \"Epic sadface: Username is required\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:120"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 4846386
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "debería permanecer en la página de login",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:131"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 45880920
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 29
+          },
+          {
+            "name": "@obligatorio",
+            "line": 29
+          },
+          {
+            "name": "@validacion",
+            "line": 29
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "funcionalidad-de-login-en-saucedemo;validación-de-campo-de-contraseña-vacío",
+        "keyword": "Scenario",
+        "line": 37,
+        "name": "Validación de campo de contraseña vacío",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 38024780
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 577557855
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "navego a la página de login de SauceDemo",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:57"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 6641541
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 38,
+            "name": "ingreso el nombre de usuario \"standard_user\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:72"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1092373067
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 39,
+            "name": "hago clic en el botón de login",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:80"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 33654691
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 40,
+            "name": "debería ver un mensaje de error \"Epic sadface: Password is required\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:120"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 3140820
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 41,
+            "name": "debería permanecer en la página de login",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:131"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 45762727
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 36
+          },
+          {
+            "name": "@obligatorio",
+            "line": 36
+          },
+          {
+            "name": "@validacion",
+            "line": 36
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "funcionalidad-de-login-en-saucedemo;validación-de-ambos-campos-vacíos",
+        "keyword": "Scenario",
+        "line": 44,
+        "name": "Validación de ambos campos vacíos",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 36996560
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 529694235
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "navego a la página de login de SauceDemo",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:57"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1099473575
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 45,
+            "name": "hago clic en el botón de login",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:80"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 34134325
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 46,
+            "name": "debería ver un mensaje de error \"Epic sadface: Username is required\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:120"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 3201657
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 47,
+            "name": "debería permanecer en la página de login",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:131"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 44691579
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 43
+          },
+          {
+            "name": "@obligatorio",
+            "line": 43
+          },
+          {
+            "name": "@validacion",
+            "line": 43
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "funcionalidad-de-login-en-saucedemo;intento-de-login-con-usuario-bloqueado",
+        "keyword": "Scenario",
+        "line": 54,
+        "name": "Intento de login con usuario bloqueado",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 37009646
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 613493856
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "navego a la página de login de SauceDemo",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:57"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 6716553
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 55,
+            "name": "ingreso el nombre de usuario \"locked_out_user\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:72"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 3028879
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 56,
+            "name": "ingreso la contraseña \"secret_sauce\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:76"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1091672810
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 57,
+            "name": "hago clic en el botón de login",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:80"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 31764848
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 58,
+            "name": "debería ver un mensaje de error \"Epic sadface: Sorry, this user has been locked out.\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:120"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 3208028
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 59,
+            "name": "debería permanecer en la página de login",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:131"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 48033809
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@extendido",
+            "line": 53
+          },
+          {
+            "name": "@negativo",
+            "line": 53
+          },
+          {
+            "name": "@cuenta-bloqueada",
+            "line": 53
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "funcionalidad-de-login-en-saucedemo;login-exitoso-con-usuario-problema",
+        "keyword": "Scenario",
+        "line": 62,
+        "name": "Login exitoso con usuario problema",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 37038941
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 578062788
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "navego a la página de login de SauceDemo",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:57"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 6625722
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 63,
+            "name": "ingreso el nombre de usuario \"problem_user\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:72"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 3182308
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 64,
+            "name": "ingreso la contraseña \"secret_sauce\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:76"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1135949476
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 65,
+            "name": "hago clic en el botón de login",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:80"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1980333
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 66,
+            "name": "debería ser redirigido a la página de inventario",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:104"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 80995043
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 67,
+            "name": "debería ver el título de productos",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:108"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 104438583
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@extendido",
+            "line": 61
+          },
+          {
+            "name": "@positivo",
+            "line": 61
+          },
+          {
+            "name": "@usuario-problema",
+            "line": 61
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "funcionalidad-de-login-en-saucedemo;login-exitoso-con-usuario-de-problema-de-rendimiento",
+        "keyword": "Scenario",
+        "line": 70,
+        "name": "Login exitoso con usuario de problema de rendimiento",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 36282995
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 595884388
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "navego a la página de login de SauceDemo",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:57"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 6469316
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 71,
+            "name": "ingreso el nombre de usuario \"performance_glitch_user\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:72"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 3000156
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 72,
+            "name": "ingreso la contraseña \"secret_sauce\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:76"
+            }
+          },
+          {
+            "result": {
+              "status": "failed",
+              "duration": 5000349403,
+              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (/home/merxx/Projects/prueba-tecnica-somos-makers/node_modules/.pnpm/@cucumber+cucumber@13.3.0/node_modules/@cucumber/cucumber/lib/time.js:31:20)\n    at listOnTimeout (node:internal/timers:685:17)\n    at process.processTimers (node:internal/timers:618:7)"
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 73,
+            "name": "hago clic en el botón de login",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:80"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 74,
+            "name": "debería ser redirigido a la página de inventario",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:104"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 75,
+            "name": "debería ver el título de productos",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:108"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 447517325
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@extendido",
+            "line": 69
+          },
+          {
+            "name": "@positivo",
+            "line": 69
+          },
+          {
+            "name": "@usuario-rendimiento",
+            "line": 69
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "funcionalidad-de-login-en-saucedemo;login-exitoso-con-usuario-de-error",
+        "keyword": "Scenario",
+        "line": 78,
+        "name": "Login exitoso con usuario de error",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 37956710
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 570582997
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "navego a la página de login de SauceDemo",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:57"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 5959043
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 79,
+            "name": "ingreso el nombre de usuario \"error_user\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:72"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 2447184
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 80,
+            "name": "ingreso la contraseña \"secret_sauce\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:76"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1138607172
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 81,
+            "name": "hago clic en el botón de login",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:80"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 2153408
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 82,
+            "name": "debería ser redirigido a la página de inventario",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:104"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 80422093
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 83,
+            "name": "debería ver el título de productos",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:108"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 102189804
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@extendido",
+            "line": 77
+          },
+          {
+            "name": "@positivo",
+            "line": 77
+          },
+          {
+            "name": "@usuario-error",
+            "line": 77
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "funcionalidad-de-login-en-saucedemo;login-exitoso-con-usuario-visual",
+        "keyword": "Scenario",
+        "line": 86,
+        "name": "Login exitoso con usuario visual",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 39052808
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 576589122
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "navego a la página de login de SauceDemo",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:57"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 7371366
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 87,
+            "name": "ingreso el nombre de usuario \"visual_user\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:72"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 2841377
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 88,
+            "name": "ingreso la contraseña \"secret_sauce\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:76"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1139968219
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 89,
+            "name": "hago clic en el botón de login",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:80"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1882279
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 90,
+            "name": "debería ser redirigido a la página de inventario",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:104"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 64993344
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 91,
+            "name": "debería ver el título de productos",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:108"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 136942755
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@extendido",
+            "line": 85
+          },
+          {
+            "name": "@positivo",
+            "line": 85
+          },
+          {
+            "name": "@usuario-visual",
+            "line": 85
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "funcionalidad-de-login-en-saucedemo;login-con-nombre-de-usuario-que-contiene-espacio-al-inicio",
+        "keyword": "Scenario",
+        "line": 98,
+        "name": "Login con nombre de usuario que contiene espacio al inicio",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 36794029
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1058311347
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "navego a la página de login de SauceDemo",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:57"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 8267716
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 99,
+            "name": "ingreso el nombre de usuario \" standard_user\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:72"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 4237298
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 100,
+            "name": "ingreso la contraseña \"secret_sauce\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:76"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1088648242
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 101,
+            "name": "hago clic en el botón de login",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:80"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 31624864
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 102,
+            "name": "debería ver un mensaje de error \"Epic sadface: Username and password do not match any user in this service\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:120"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 3158043
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 103,
+            "name": "debería permanecer en la página de login",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:131"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 45503650
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@extendido",
+            "line": 97
+          },
+          {
+            "name": "@negativo",
+            "line": 97
+          },
+          {
+            "name": "@entrada-invalida",
+            "line": 97
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "funcionalidad-de-login-en-saucedemo;login-con-nombre-de-usuario-que-contiene-espacio-al-final",
+        "keyword": "Scenario",
+        "line": 106,
+        "name": "Login con nombre de usuario que contiene espacio al final",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 36808275
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 580380099
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "navego a la página de login de SauceDemo",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:57"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 6488643
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 107,
+            "name": "ingreso el nombre de usuario \"standard_user \"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:72"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 2951183
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 108,
+            "name": "ingreso la contraseña \"secret_sauce\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:76"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1092907374
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 109,
+            "name": "hago clic en el botón de login",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:80"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 31812256
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 110,
+            "name": "debería ver un mensaje de error \"Epic sadface: Username and password do not match any user in this service\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:120"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 3282639
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 111,
+            "name": "debería permanecer en la página de login",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:131"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 48479099
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@extendido",
+            "line": 105
+          },
+          {
+            "name": "@negativo",
+            "line": 105
+          },
+          {
+            "name": "@entrada-invalida",
+            "line": 105
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "funcionalidad-de-login-en-saucedemo;login-con-nombre-de-usuario-que-contiene-caracteres-especiales",
+        "keyword": "Scenario",
+        "line": 114,
+        "name": "Login con nombre de usuario que contiene caracteres especiales",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 36355352
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 527290838
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "navego a la página de login de SauceDemo",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:57"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 6339072
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 115,
+            "name": "ingreso el nombre de usuario \"standard@@user\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:72"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 2785531
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 116,
+            "name": "ingreso la contraseña \"secret_sauce\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:76"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1089497016
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 117,
+            "name": "hago clic en el botón de login",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:80"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 34243580
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 118,
+            "name": "debería ver un mensaje de error \"Epic sadface: Username and password do not match any user in this service\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:120"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 2580887
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 119,
+            "name": "debería permanecer en la página de login",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:131"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 46254274
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@extendido",
+            "line": 113
+          },
+          {
+            "name": "@negativo",
+            "line": 113
+          },
+          {
+            "name": "@entrada-invalida",
+            "line": 113
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "funcionalidad-de-login-en-saucedemo;login-con-nombre-de-usuario-en-formato-de-correo-electrónico",
+        "keyword": "Scenario",
+        "line": 122,
+        "name": "Login con nombre de usuario en formato de correo electrónico",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 37309011
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 612285524
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "navego a la página de login de SauceDemo",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:57"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 7269234
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 123,
+            "name": "ingreso el nombre de usuario \"user@saucedemo.com\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:72"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 2832651
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 124,
+            "name": "ingreso la contraseña \"secret_sauce\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:76"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1090966757
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 125,
+            "name": "hago clic en el botón de login",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:80"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 32515402
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 126,
+            "name": "debería ver un mensaje de error \"Epic sadface: Username and password do not match any user in this service\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:120"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 2986189
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 127,
+            "name": "debería permanecer en la página de login",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:131"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 46595918
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@extendido",
+            "line": 121
+          },
+          {
+            "name": "@negativo",
+            "line": 121
+          },
+          {
+            "name": "@entrada-invalida",
+            "line": 121
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "funcionalidad-de-login-en-saucedemo;login-con-nombre-de-usuario-numérico",
+        "keyword": "Scenario",
+        "line": 130,
+        "name": "Login con nombre de usuario numérico",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 36347467
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 580100565
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "navego a la página de login de SauceDemo",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:57"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 6184941
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 131,
+            "name": "ingreso el nombre de usuario \"12345\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:72"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 2799397
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 132,
+            "name": "ingreso la contraseña \"secret_sauce\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:76"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1090596689
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 133,
+            "name": "hago clic en el botón de login",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:80"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 33453230
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 134,
+            "name": "debería ver un mensaje de error \"Epic sadface: Username and password do not match any user in this service\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:120"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 2509771
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 135,
+            "name": "debería permanecer en la página de login",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:131"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 45014789
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@extendido",
+            "line": 129
+          },
+          {
+            "name": "@negativo",
+            "line": 129
+          },
+          {
+            "name": "@entrada-invalida",
+            "line": 129
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "funcionalidad-de-login-en-saucedemo;login-con-nombre-de-usuario-en-mayúsculas",
+        "keyword": "Scenario",
+        "line": 138,
+        "name": "Login con nombre de usuario en mayúsculas",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 36073742
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 547972932
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "navego a la página de login de SauceDemo",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:57"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 6974951
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 139,
+            "name": "ingreso el nombre de usuario \"STANDARD_USER\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:72"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 2985238
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 140,
+            "name": "ingreso la contraseña \"secret_sauce\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:76"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1090945168
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 141,
+            "name": "hago clic en el botón de login",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:80"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 32718396
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 142,
+            "name": "debería ver un mensaje de error \"Epic sadface: Username and password do not match any user in this service\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:120"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 3406963
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 143,
+            "name": "debería permanecer en la página de login",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:131"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 49281944
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@extendido",
+            "line": 137
+          },
+          {
+            "name": "@negativo",
+            "line": 137
+          },
+          {
+            "name": "@sensibilidad-mayusculas",
+            "line": 137
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "funcionalidad-de-login-en-saucedemo;intento-de-login-con-patrón-de-inyección-sql",
+        "keyword": "Scenario",
+        "line": 146,
+        "name": "Intento de login con patrón de inyección SQL",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 38209368
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 558924371
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "navego a la página de login de SauceDemo",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:57"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 5895054
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 147,
+            "name": "ingreso el nombre de usuario \"admin' OR '1'='1\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:72"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 2351172
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 148,
+            "name": "ingreso la contraseña \"secret_sauce\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:76"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1091713618
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 149,
+            "name": "hago clic en el botón de login",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:80"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 31923688
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 150,
+            "name": "debería ver un mensaje de error \"Epic sadface: Username and password do not match any user in this service\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:120"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 3020635
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 151,
+            "name": "debería permanecer en la página de login",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:131"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 45754102
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@extendido",
+            "line": 145
+          },
+          {
+            "name": "@negativo",
+            "line": 145
+          },
+          {
+            "name": "@inyeccion-sql",
+            "line": 145
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "funcionalidad-de-login-en-saucedemo;intento-de-login-con-patrón-xss",
+        "keyword": "Scenario",
+        "line": 154,
+        "name": "Intento de login con patrón XSS",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 36110670
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 597737497
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "navego a la página de login de SauceDemo",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:57"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 6725690
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 155,
+            "name": "ingreso el nombre de usuario \"<script>alert('xss')</script>\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:72"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 2816359
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 156,
+            "name": "ingreso la contraseña \"secret_sauce\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:76"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1090683195
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 157,
+            "name": "hago clic en el botón de login",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:80"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 33642327
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 158,
+            "name": "debería ver un mensaje de error \"Epic sadface: Username and password do not match any user in this service\"",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:120"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 2862617
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 159,
+            "name": "debería permanecer en la página de login",
+            "match": {
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:131"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 46170437
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@extendido",
+            "line": 153
+          },
+          {
+            "name": "@negativo",
+            "line": 153
+          },
+          {
+            "name": "@intento-xss",
+            "line": 153
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "funcionalidad-de-login-en-saucedemo",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Funcionalidad de Login en SauceDemo",
+    "tags": [],
+    "uri": "automatizacion-web-playwright/features/login.feature"
+  }
+]
