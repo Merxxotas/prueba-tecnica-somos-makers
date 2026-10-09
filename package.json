@@ -11,6 +11,7 @@
     "test:playwright": "cucumber-js automatizacion-web-playwright/features --require-module tsx --require 'automatizacion-web-playwright/support/**/*.ts' --format progress-bar --format html:automatizacion-web-playwright/cucumber-report/cucumber-report.html --format json:automatizacion-web-playwright/cucumber-report/cucumber-report.json",
     "test:playwright:headed": "cucumber-js automatizacion-web-playwright/features --require-module tsx --require 'automatizacion-web-playwright/support/**/*.ts' --format progress-bar",
     "playwright:install": "playwright install chromium",
+    "test:api": "node scripts/test-api.js",
     "evidencias": "node scripts/capturar-evidencias.js"
   },
   "keywords": [
