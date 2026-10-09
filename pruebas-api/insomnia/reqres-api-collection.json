@@ -1,0 +1,537 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2026-10-09T20:50:00.000Z",
+  "__export_source": "insomnia.desktop.app:v2023.5.8",
+  "resources": [
+    {
+      "_id": "req_0",
+      "parentId": "fld_users",
+      "modified": 1696881000000,
+      "created": 1696881000000,
+      "url": "{{ _.baseURL }}/api/users?page=2",
+      "name": "GET - Listar Usuarios (Paginado)",
+      "description": "Obtiene la lista de usuarios con paginación. Retorna información de página actual, total de páginas, y lista de usuarios.",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1696881000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_1",
+      "parentId": "fld_users",
+      "modified": 1696881100000,
+      "created": 1696881100000,
+      "url": "{{ _.baseURL }}/api/users/2",
+      "name": "GET - Obtener Usuario por ID",
+      "description": "Obtiene los detalles de un usuario específico por su ID.",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1696881100000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_2",
+      "parentId": "fld_users",
+      "modified": 1696881200000,
+      "created": 1696881200000,
+      "url": "{{ _.baseURL }}/api/users/999",
+      "name": "GET - Usuario No Encontrado",
+      "description": "Intenta obtener un usuario que no existe. Debería retornar 404.",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1696881200000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_3",
+      "parentId": "fld_users",
+      "modified": 1696881300000,
+      "created": 1696881300000,
+      "url": "{{ _.baseURL }}/api/users",
+      "name": "POST - Crear Usuario",
+      "description": "Crea un nuevo usuario con nombre y trabajo. ReqRes simula la creación retornando el objeto con ID y timestamp.",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"name\": \"Juan Pérez\",\n  \"job\": \"QA Automation Engineer\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Accept",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1696881300000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_4",
+      "parentId": "fld_users",
+      "modified": 1696881400000,
+      "created": 1696881400000,
+      "url": "{{ _.baseURL }}/api/users/2",
+      "name": "PUT - Actualizar Usuario (Completo)",
+      "description": "Actualiza completamente un usuario existente (reemplaza todos los campos).",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"name\": \"Juan Pérez Actualizado\",\n  \"job\": \"Senior QA Engineer\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Accept",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1696881400000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_5",
+      "parentId": "fld_users",
+      "modified": 1696881500000,
+      "created": 1696881500000,
+      "url": "{{ _.baseURL }}/api/users/2",
+      "name": "PATCH - Actualizar Usuario (Parcial)",
+      "description": "Actualiza parcialmente un usuario existente (solo los campos enviados).",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"job\": \"Lead QA Engineer\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Accept",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1696881500000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_6",
+      "parentId": "fld_users",
+      "modified": 1696881600000,
+      "created": 1696881600000,
+      "url": "{{ _.baseURL }}/api/users/2",
+      "name": "DELETE - Eliminar Usuario",
+      "description": "Elimina un usuario. ReqRes retorna 204 No Content en caso exitoso.",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1696881600000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_7",
+      "parentId": "fld_resources",
+      "modified": 1696881700000,
+      "created": 1696881700000,
+      "url": "{{ _.baseURL }}/api/unknown",
+      "name": "GET - Listar Recursos",
+      "description": "Obtiene la lista de recursos (colores en este caso). Endpoint 'unknown' retorna recursos genéricos.",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1696881700000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_8",
+      "parentId": "fld_resources",
+      "modified": 1696881800000,
+      "created": 1696881800000,
+      "url": "{{ _.baseURL }}/api/unknown/2",
+      "name": "GET - Obtener Recurso por ID",
+      "description": "Obtiene los detalles de un recurso específico por su ID.",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1696881800000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_9",
+      "parentId": "fld_auth",
+      "modified": 1696881900000,
+      "created": 1696881900000,
+      "url": "{{ _.baseURL }}/api/register",
+      "name": "POST - Registro Exitoso",
+      "description": "Registra un nuevo usuario. ReqRes requiere email y password. Retorna ID y token.",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"email\": \"eve.holt@reqres.in\",\n  \"password\": \"pistol\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Accept",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1696881900000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_10",
+      "parentId": "fld_auth",
+      "modified": 1696882000000,
+      "created": 1696882000000,
+      "url": "{{ _.baseURL }}/api/register",
+      "name": "POST - Registro Fallido (Sin Password)",
+      "description": "Intenta registrar sin password. Debería retornar error 400.",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"email\": \"sydney@fife\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Accept",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1696882000000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_11",
+      "parentId": "fld_auth",
+      "modified": 1696882100000,
+      "created": 1696882100000,
+      "url": "{{ _.baseURL }}/api/login",
+      "name": "POST - Login Exitoso",
+      "description": "Inicia sesión con email y password. Retorna token de autenticación.",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"email\": \"eve.holt@reqres.in\",\n  \"password\": \"cityslicka\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Accept",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1696882100000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_12",
+      "parentId": "fld_auth",
+      "modified": 1696882200000,
+      "created": 1696882200000,
+      "url": "{{ _.baseURL }}/api/login",
+      "name": "POST - Login Fallido (Sin Password)",
+      "description": "Intenta hacer login sin password. Debería retornar error 400.",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"email\": \"peter@klaven\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Accept",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1696882200000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_13",
+      "parentId": "fld_delayed",
+      "modified": 1696882300000,
+      "created": 1696882300000,
+      "url": "{{ _.baseURL }}/api/users?delay=3",
+      "name": "GET - Respuesta Diferida (3 segundos)",
+      "description": "Simula una respuesta lenta del servidor con delay de 3 segundos. Útil para testing de timeouts.",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1696882300000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_users",
+      "parentId": "wrk_main",
+      "modified": 1696880000000,
+      "created": 1696880000000,
+      "name": "Usuarios (CRUD)",
+      "description": "Operaciones CRUD completas para el recurso de usuarios",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1696880000000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_resources",
+      "parentId": "wrk_main",
+      "modified": 1696880100000,
+      "created": 1696880100000,
+      "name": "Recursos",
+      "description": "Operaciones de lectura para recursos genéricos",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1696880100000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_auth",
+      "parentId": "wrk_main",
+      "modified": 1696880200000,
+      "created": 1696880200000,
+      "name": "Autenticacion",
+      "description": "Endpoints de registro y login",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1696880200000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_delayed",
+      "parentId": "wrk_main",
+      "modified": 1696880300000,
+      "created": 1696880300000,
+      "name": "Testing de Performance",
+      "description": "Endpoints con respuestas diferidas para testing de timeouts",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1696880300000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_main",
+      "parentId": null,
+      "modified": 1696870000000,
+      "created": 1696870000000,
+      "name": "ReqRes API - Prueba Técnica",
+      "description": "Colección completa de pruebas para la API de ReqRes (https://reqres.in). Incluye operaciones CRUD, autenticación y casos de prueba edge.",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "env_base",
+      "parentId": "wrk_main",
+      "modified": 1696870100000,
+      "created": 1696870100000,
+      "name": "Base Environment",
+      "data": {
+        "baseURL": "https://reqres.in"
+      },
+      "dataPropertyOrder": {
+        "&": ["baseURL"]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1696870100000,
+      "_type": "environment"
+    },
+    {
+      "_id": "env_root",
+      "parentId": "wrk_main",
+      "modified": 1696870000000,
+      "created": 1696870000000,
+      "name": "Root Environment",
+      "data": {},
+      "dataPropertyOrder": null,
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1696870000000,
+      "_type": "environment"
+    }
+  ]
+}
