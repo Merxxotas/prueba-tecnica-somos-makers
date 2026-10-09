@@ -170,4 +170,29 @@ Ver documentación completa en `evidencias/insomnia/screenshots/README.md`
 
 ## Automatización
 
-Para automatizar estas pruebas, ver Issue #4 que implementa testing con `inso-cli`.
+La colección puede ejecutarse de dos formas:
+
+### 1. Script Node.js Automatizado (Recomendado)
+
+```bash
+pnpm test:api
+```
+
+Ventajas:
+- No requiere instalación adicional
+- Validaciones automáticas de códigos HTTP
+- Reporte JSON detallado
+- Output con colores
+- Exit codes para CI/CD
+
+Ver documentación en `AUTOMATION.md`
+
+### 2. inso-cli (Opcional)
+
+```bash
+inso-cli run collection wrk_main -w pruebas-api/insomnia/reqres-api-collection.json -e env_base
+```
+
+Requiere instalación de inso-cli desde https://developer.konghq.com/inso-cli/
+
+Ver guía completa de instalación y uso en `INSO_CLI.md`
