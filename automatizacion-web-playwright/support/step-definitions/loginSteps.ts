@@ -77,7 +77,7 @@ When("ingreso la contraseña {string}", async function (password: string) {
   await loginPage.passwordInput.fill(password);
 });
 
-When("hago clic en el botón de login", async function () {
+When("hago clic en el botón de login", { timeout: 10000 }, async function () {
   // Capturar antes de hacer clic
   const screenshotName = `02-antes-click-login-${Date.now()}.png`;
   await page.screenshot({ 
@@ -86,8 +86,8 @@ When("hago clic en el botón de login", async function () {
   
   await loginPage.loginButton.click();
   
-  // Esperar navegación o mensaje de error
-  await page.waitForTimeout(1000);
+  // Esperar navegación o mensaje de error (aumentado para performance_glitch_user)
+  await page.waitForTimeout(3000);
   
   // Capturar después del clic
   const screenshotNameAfter = `03-despues-click-login-${Date.now()}.png`;
