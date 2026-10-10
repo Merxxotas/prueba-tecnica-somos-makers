@@ -625,6 +625,29 @@
       "_type": "environment"
     },
     {
+      "_id": "env_fallback",
+      "parentId": "wrk_main",
+      "modified": 1696870200000,
+      "created": 1696870200000,
+      "name": "Fallback Environment",
+      "data": {
+        "baseURL": "https://reqres.in",
+        "publicKey": "",
+        "serverKey": ""
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "baseURL",
+          "publicKey",
+          "serverKey"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1696870200000,
+      "_type": "environment"
+    },
+    {
       "_id": "env_root",
       "parentId": "wrk_main",
       "modified": 1696870000000,

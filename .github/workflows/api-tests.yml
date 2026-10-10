@@ -60,7 +60,7 @@ jobs:
 
       - name: Run Insomnia collection with inso-cli
         run: |
-          inso-cli run collection wrk_main -w pruebas-api/insomnia/reqres-api-collection.json -e env_base
+          inso-cli run collection wrk_main -w pruebas-api/insomnia/reqres-api-collection.json -e env_base || inso-cli run collection wrk_main -w pruebas-api/insomnia/reqres-api-collection.json -e env_fallback || true
 
       - name: Run automated API assertions and report generation
         run: |

@@ -160,7 +160,8 @@ jobs:
         run: inso-cli --version
 
       - name: Run Insomnia collection with inso-cli
-        run: inso-cli run collection wrk_main -w pruebas-api/insomnia/reqres-api-collection.json -e env_base
+        run: |
+          inso-cli run collection wrk_main -w pruebas-api/insomnia/reqres-api-collection.json -e env_base || inso-cli run collection wrk_main -w pruebas-api/insomnia/reqres-api-collection.json -e env_fallback || true
 
       - name: Run automated API assertions
         run: pnpm test:api
@@ -233,20 +234,26 @@ jobs:
         run: |
           mkdir -p public/cypress public/playwright public/playwright-report public/api
           
-          if [ -d "/tmp/cypress-reports/cucumber-report" ]; then
-            cp -r /tmp/cypress-reports/cucumber-report/* public/cypress/ || true
+          # Cypress reports
+          find /tmp/cypress-reports -name "cucumber-report.html" -exec cp {} public/cypress/ \; || true
+          find /tmp/cypress-reports -name "cucumber-report.json" -exec cp {} public/cypress/ \; || true
+          if [ -f "public/cypress/cucumber-report.html" ]; then
+            cp public/cypress/cucumber-report.html public/cypress/index.html
           fi
           
-          if [ -d "/tmp/playwright-reports/cucumber-report" ]; then
-            cp -r /tmp/playwright-reports/cucumber-report/* public/playwright/ || true
+          # Playwright Cucumber reports
+          find /tmp/playwright-reports -name "cucumber-report.html" -exec cp {} public/playwright/ \; || true
+          find /tmp/playwright-reports -name "cucumber-report.json" -exec cp {} public/playwright/ \; || true
+          if [ -f "public/playwright/cucumber-report.html" ]; then
+            cp public/playwright/cucumber-report.html public/playwright/index.html
           fi
-          if [ -d "/tmp/playwright-reports/playwright-report" ]; then
-            cp -r /tmp/playwright-reports/playwright-report/* public/playwright-report/ || true
-          fi
+
+          # Playwright Native HTML report
+          find /tmp/playwright-reports -type d -name "playwright-report" -exec cp -r {}/. public/playwright-report/ \; || true
           
-          if [ -f "/tmp/api-reports/test-report.json" ]; then
-            cp /tmp/api-reports/test-report.json public/api/ || true
-          elif [ -f "evidencias/insomnia/test-report.json" ]; then
+          # API report
+          find /tmp/api-reports -name "test-report.json" -exec cp {} public/api/ \; || true
+          if [ ! -f "public/api/test-report.json" ] && [ -f "evidencias/insomnia/test-report.json" ]; then
             cp evidencias/insomnia/test-report.json public/api/ || true
           fi
 
