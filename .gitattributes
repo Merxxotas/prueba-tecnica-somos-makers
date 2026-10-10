@@ -1,0 +1,12 @@
+# GitHub Linguist Language Detection Configuration
+# Documentación: https://github.com/github-linguist/linguist/blob/master/docs/overrides.md
+
+# Excluir reportes HTML y artefactos generados de las estadísticas del repositorio
+evidencias/** linguist-generated=true
+evidencias/** linguist-vendored=true
+evidencias/**/*.html linguist-detectable=false
+
+# Asegurar que el código de automatización en TypeScript sea prioritario
+automatizacion-web-cypress/**/*.ts linguist-detectable=true
+automatizacion-web-playwright/**/*.ts linguist-detectable=true
+cypress.config.ts linguist-detectable=true
