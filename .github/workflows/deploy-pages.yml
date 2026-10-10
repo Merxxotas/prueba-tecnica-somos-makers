@@ -36,16 +36,30 @@ jobs:
         run: |
           mkdir -p public/cypress public/playwright public/playwright-report public/api
           
-          # Copiar reportes existentes de evidencias
+          # Cypress reports
           if [ -d "evidencias/cypress/cucumber-report" ]; then
             cp -r evidencias/cypress/cucumber-report/* public/cypress/
           fi
+          if [ -f "public/cypress/cucumber-report.html" ]; then
+            cp public/cypress/cucumber-report.html public/cypress/index.html
+          fi
+
+          # Playwright Cucumber reports
           if [ -d "evidencias/playwright/cucumber-report" ]; then
             cp -r evidencias/playwright/cucumber-report/* public/playwright/
+          elif [ -d "automatizacion-web-playwright/cucumber-report" ]; then
+            cp -r automatizacion-web-playwright/cucumber-report/* public/playwright/
           fi
+          if [ -f "public/playwright/cucumber-report.html" ]; then
+            cp public/playwright/cucumber-report.html public/playwright/index.html
+          fi
+
+          # Playwright Native HTML report
           if [ -d "automatizacion-web-playwright/playwright-report" ]; then
             cp -r automatizacion-web-playwright/playwright-report/* public/playwright-report/
           fi
+
+          # API report
           if [ -d "evidencias/insomnia" ]; then
             cp -r evidencias/insomnia/* public/api/
           fi

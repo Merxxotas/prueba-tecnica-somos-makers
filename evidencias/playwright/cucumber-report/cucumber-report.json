@@ -12,7 +12,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 53525684
+              "duration": 52508162
             },
             "keyword": "Before",
             "hidden": true
@@ -20,85 +20,85 @@
           {
             "result": {
               "status": "passed",
-              "duration": 654009650
+              "duration": 697648340
             },
             "arguments": [],
             "keyword": "Given ",
             "line": 7,
             "name": "navego a la página de login de SauceDemo",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:57"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:58"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 10210790
+              "duration": 10892233
             },
             "arguments": [],
             "keyword": "When ",
             "line": 15,
             "name": "ingreso el nombre de usuario \"standard_user\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:72"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:73"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 2899787
+              "duration": 3621056
             },
             "arguments": [],
             "keyword": "And ",
             "line": 16,
             "name": "ingreso la contraseña \"secret_sauce\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:76"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:77"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 1133928811
+              "duration": 182361417
             },
             "arguments": [],
             "keyword": "And ",
             "line": 17,
             "name": "hago clic en el botón de login",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:80"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:81"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 4131649
+              "duration": 5020183
             },
             "arguments": [],
             "keyword": "Then ",
             "line": 18,
             "name": "debería ser redirigido a la página de inventario",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:104"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:102"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 78879464
+              "duration": 78063816
             },
             "arguments": [],
             "keyword": "And ",
             "line": 19,
             "name": "debería ver el título de productos",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:108"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:106"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 108604115
+              "duration": 90887369
             },
             "keyword": "After",
             "hidden": true
@@ -130,7 +130,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 37718682
+              "duration": 38788780
             },
             "keyword": "Before",
             "hidden": true
@@ -138,85 +138,85 @@
           {
             "result": {
               "status": "passed",
-              "duration": 573333549
+              "duration": 603538143
             },
             "arguments": [],
             "keyword": "Given ",
             "line": 7,
             "name": "navego a la página de login de SauceDemo",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:57"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:58"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 6231969
+              "duration": 7559289
             },
             "arguments": [],
             "keyword": "When ",
             "line": 23,
             "name": "ingreso el nombre de usuario \"standard_user\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:72"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:73"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 2686755
+              "duration": 3475913
             },
             "arguments": [],
             "keyword": "And ",
             "line": 24,
             "name": "ingreso la contraseña \"contraseña_incorrecta\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:76"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:77"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 1090307120
+              "duration": 89921659
             },
             "arguments": [],
             "keyword": "And ",
             "line": 25,
             "name": "hago clic en el botón de login",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:80"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:81"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 32216008
+              "duration": 32188568
             },
             "arguments": [],
             "keyword": "Then ",
             "line": 26,
             "name": "debería ver un mensaje de error \"Epic sadface: Username and password do not match any user in this service\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:120"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:118"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 3610227
+              "duration": 3970523
             },
             "arguments": [],
             "keyword": "And ",
             "line": 27,
             "name": "debería permanecer en la página de login",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:131"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:129"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 47097123
+              "duration": 49976400
             },
             "keyword": "After",
             "hidden": true
@@ -248,7 +248,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 37013984
+              "duration": 37392749
             },
             "keyword": "Before",
             "hidden": true
@@ -256,72 +256,72 @@
           {
             "result": {
               "status": "passed",
-              "duration": 594539690
+              "duration": 591334769
             },
             "arguments": [],
             "keyword": "Given ",
             "line": 7,
             "name": "navego a la página de login de SauceDemo",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:57"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:58"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 6613169
+              "duration": 7059557
             },
             "arguments": [],
             "keyword": "When ",
             "line": 31,
             "name": "ingreso la contraseña \"secret_sauce\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:76"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:77"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 1093359236
+              "duration": 93185253
             },
             "arguments": [],
             "keyword": "And ",
             "line": 32,
             "name": "hago clic en el botón de login",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:80"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:81"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 33163394
+              "duration": 31653969
             },
             "arguments": [],
             "keyword": "Then ",
             "line": 33,
             "name": "debería ver un mensaje de error \"Epic sadface: Username is required\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:120"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:118"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 4846386
+              "duration": 3632708
             },
             "arguments": [],
             "keyword": "And ",
             "line": 34,
             "name": "debería permanecer en la página de login",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:131"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:129"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 45880920
+              "duration": 49875419
             },
             "keyword": "After",
             "hidden": true
@@ -353,7 +353,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 38024780
+              "duration": 37424238
             },
             "keyword": "Before",
             "hidden": true
@@ -361,72 +361,72 @@
           {
             "result": {
               "status": "passed",
-              "duration": 577557855
+              "duration": 575520086
             },
             "arguments": [],
             "keyword": "Given ",
             "line": 7,
             "name": "navego a la página de login de SauceDemo",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:57"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:58"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 6641541
+              "duration": 7463670
             },
             "arguments": [],
             "keyword": "When ",
             "line": 38,
             "name": "ingreso el nombre de usuario \"standard_user\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:72"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:73"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 1092373067
+              "duration": 94118021
             },
             "arguments": [],
             "keyword": "And ",
             "line": 39,
             "name": "hago clic en el botón de login",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:80"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:81"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 33654691
+              "duration": 35605750
             },
             "arguments": [],
             "keyword": "Then ",
             "line": 40,
             "name": "debería ver un mensaje de error \"Epic sadface: Password is required\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:120"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:118"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 3140820
+              "duration": 3227443
             },
             "arguments": [],
             "keyword": "And ",
             "line": 41,
             "name": "debería permanecer en la página de login",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:131"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:129"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 45762727
+              "duration": 49487859
             },
             "keyword": "After",
             "hidden": true
@@ -458,7 +458,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 36996560
+              "duration": 37469914
             },
             "keyword": "Before",
             "hidden": true
@@ -466,59 +466,59 @@
           {
             "result": {
               "status": "passed",
-              "duration": 529694235
+              "duration": 587859636
             },
             "arguments": [],
             "keyword": "Given ",
             "line": 7,
             "name": "navego a la página de login de SauceDemo",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:57"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:58"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 1099473575
+              "duration": 100069631
             },
             "arguments": [],
             "keyword": "When ",
             "line": 45,
             "name": "hago clic en el botón de login",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:80"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:81"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 34134325
+              "duration": 32976193
             },
             "arguments": [],
             "keyword": "Then ",
             "line": 46,
             "name": "debería ver un mensaje de error \"Epic sadface: Username is required\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:120"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:118"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 3201657
+              "duration": 3593845
             },
             "arguments": [],
             "keyword": "And ",
             "line": 47,
             "name": "debería permanecer en la página de login",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:131"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:129"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 44691579
+              "duration": 48763523
             },
             "keyword": "After",
             "hidden": true
@@ -550,7 +550,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 37009646
+              "duration": 36822192
             },
             "keyword": "Before",
             "hidden": true
@@ -558,85 +558,85 @@
           {
             "result": {
               "status": "passed",
-              "duration": 613493856
+              "duration": 594097625
             },
             "arguments": [],
             "keyword": "Given ",
             "line": 7,
             "name": "navego a la página de login de SauceDemo",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:57"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:58"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 6716553
+              "duration": 7080436
             },
             "arguments": [],
             "keyword": "When ",
             "line": 55,
             "name": "ingreso el nombre de usuario \"locked_out_user\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:72"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:73"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 3028879
+              "duration": 3807557
             },
             "arguments": [],
             "keyword": "And ",
             "line": 56,
             "name": "ingreso la contraseña \"secret_sauce\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:76"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:77"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 1091672810
+              "duration": 88453062
             },
             "arguments": [],
             "keyword": "And ",
             "line": 57,
             "name": "hago clic en el botón de login",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:80"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:81"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 31764848
+              "duration": 32872938
             },
             "arguments": [],
             "keyword": "Then ",
             "line": 58,
             "name": "debería ver un mensaje de error \"Epic sadface: Sorry, this user has been locked out.\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:120"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:118"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 3208028
+              "duration": 3757712
             },
             "arguments": [],
             "keyword": "And ",
             "line": 59,
             "name": "debería permanecer en la página de login",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:131"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:129"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 48033809
+              "duration": 48024671
             },
             "keyword": "After",
             "hidden": true
@@ -668,7 +668,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 37038941
+              "duration": 37920423
             },
             "keyword": "Before",
             "hidden": true
@@ -676,85 +676,85 @@
           {
             "result": {
               "status": "passed",
-              "duration": 578062788
+              "duration": 625612153
             },
             "arguments": [],
             "keyword": "Given ",
             "line": 7,
             "name": "navego a la página de login de SauceDemo",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:57"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:58"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 6625722
+              "duration": 7756300
             },
             "arguments": [],
             "keyword": "When ",
             "line": 63,
             "name": "ingreso el nombre de usuario \"problem_user\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:72"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:73"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 3182308
+              "duration": 3766540
             },
             "arguments": [],
             "keyword": "And ",
             "line": 64,
             "name": "ingreso la contraseña \"secret_sauce\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:76"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:77"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 1135949476
+              "duration": 151361418
             },
             "arguments": [],
             "keyword": "And ",
             "line": 65,
             "name": "hago clic en el botón de login",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:80"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:81"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 1980333
+              "duration": 2115337
             },
             "arguments": [],
             "keyword": "Then ",
             "line": 66,
             "name": "debería ser redirigido a la página de inventario",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:104"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:102"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 80995043
+              "duration": 63498900
             },
             "arguments": [],
             "keyword": "And ",
             "line": 67,
             "name": "debería ver el título de productos",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:108"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:106"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 104438583
+              "duration": 71494623
             },
             "keyword": "After",
             "hidden": true
@@ -786,7 +786,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 36282995
+              "duration": 40240446
             },
             "keyword": "Before",
             "hidden": true
@@ -794,86 +794,85 @@
           {
             "result": {
               "status": "passed",
-              "duration": 595884388
+              "duration": 574851735
             },
             "arguments": [],
             "keyword": "Given ",
             "line": 7,
             "name": "navego a la página de login de SauceDemo",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:57"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:58"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 6469316
+              "duration": 7539804
             },
             "arguments": [],
             "keyword": "When ",
             "line": 71,
             "name": "ingreso el nombre de usuario \"performance_glitch_user\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:72"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:73"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 3000156
+              "duration": 3900582
             },
             "arguments": [],
             "keyword": "And ",
             "line": 72,
             "name": "ingreso la contraseña \"secret_sauce\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:76"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:77"
             }
           },
           {
             "result": {
-              "status": "failed",
-              "duration": 5000349403,
-              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (/home/merxx/Projects/prueba-tecnica-somos-makers/node_modules/.pnpm/@cucumber+cucumber@13.3.0/node_modules/@cucumber/cucumber/lib/time.js:31:20)\n    at listOnTimeout (node:internal/timers:685:17)\n    at process.processTimers (node:internal/timers:618:7)"
+              "status": "passed",
+              "duration": 5204673519
             },
             "arguments": [],
             "keyword": "And ",
             "line": 73,
             "name": "hago clic en el botón de login",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:80"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:81"
             }
           },
           {
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 3421941
             },
             "arguments": [],
             "keyword": "Then ",
             "line": 74,
             "name": "debería ser redirigido a la página de inventario",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:104"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:102"
             }
           },
           {
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 62627408
             },
             "arguments": [],
             "keyword": "And ",
             "line": 75,
             "name": "debería ver el título de productos",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:108"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:106"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 447517325
+              "duration": 140384165
             },
             "keyword": "After",
             "hidden": true
@@ -905,7 +904,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 37956710
+              "duration": 38109901
             },
             "keyword": "Before",
             "hidden": true
@@ -913,85 +912,85 @@
           {
             "result": {
               "status": "passed",
-              "duration": 570582997
+              "duration": 625005548
             },
             "arguments": [],
             "keyword": "Given ",
             "line": 7,
             "name": "navego a la página de login de SauceDemo",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:57"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:58"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 5959043
+              "duration": 6364988
             },
             "arguments": [],
             "keyword": "When ",
             "line": 79,
             "name": "ingreso el nombre de usuario \"error_user\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:72"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:73"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 2447184
+              "duration": 2935604
             },
             "arguments": [],
             "keyword": "And ",
             "line": 80,
             "name": "ingreso la contraseña \"secret_sauce\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:76"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:77"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 1138607172
+              "duration": 175510872
             },
             "arguments": [],
             "keyword": "And ",
             "line": 81,
             "name": "hago clic en el botón de login",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:80"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:81"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 2153408
+              "duration": 2356211
             },
             "arguments": [],
             "keyword": "Then ",
             "line": 82,
             "name": "debería ser redirigido a la página de inventario",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:104"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:102"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 80422093
+              "duration": 73987352
             },
             "arguments": [],
             "keyword": "And ",
             "line": 83,
             "name": "debería ver el título de productos",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:108"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:106"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 102189804
+              "duration": 83867646
             },
             "keyword": "After",
             "hidden": true
@@ -1023,7 +1022,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 39052808
+              "duration": 38841910
             },
             "keyword": "Before",
             "hidden": true
@@ -1031,85 +1030,85 @@
           {
             "result": {
               "status": "passed",
-              "duration": 576589122
+              "duration": 560854527
             },
             "arguments": [],
             "keyword": "Given ",
             "line": 7,
             "name": "navego a la página de login de SauceDemo",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:57"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:58"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 7371366
+              "duration": 7310922
             },
             "arguments": [],
             "keyword": "When ",
             "line": 87,
             "name": "ingreso el nombre de usuario \"visual_user\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:72"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:73"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 2841377
+              "duration": 6619577
             },
             "arguments": [],
             "keyword": "And ",
             "line": 88,
             "name": "ingreso la contraseña \"secret_sauce\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:76"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:77"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 1139968219
+              "duration": 171804154
             },
             "arguments": [],
             "keyword": "And ",
             "line": 89,
             "name": "hago clic en el botón de login",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:80"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:81"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 1882279
+              "duration": 2331444
             },
             "arguments": [],
             "keyword": "Then ",
             "line": 90,
             "name": "debería ser redirigido a la página de inventario",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:104"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:102"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 64993344
+              "duration": 80480743
             },
             "arguments": [],
             "keyword": "And ",
             "line": 91,
             "name": "debería ver el título de productos",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:108"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:106"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 136942755
+              "duration": 97628507
             },
             "keyword": "After",
             "hidden": true
@@ -1141,7 +1140,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 36794029
+              "duration": 37848817
             },
             "keyword": "Before",
             "hidden": true
@@ -1149,85 +1148,85 @@
           {
             "result": {
               "status": "passed",
-              "duration": 1058311347
+              "duration": 560359835
             },
             "arguments": [],
             "keyword": "Given ",
             "line": 7,
             "name": "navego a la página de login de SauceDemo",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:57"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:58"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 8267716
+              "duration": 6921076
             },
             "arguments": [],
             "keyword": "When ",
             "line": 99,
             "name": "ingreso el nombre de usuario \" standard_user\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:72"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:73"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 4237298
+              "duration": 3690355
             },
             "arguments": [],
             "keyword": "And ",
             "line": 100,
             "name": "ingreso la contraseña \"secret_sauce\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:76"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:77"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 1088648242
+              "duration": 95361003
             },
             "arguments": [],
             "keyword": "And ",
             "line": 101,
             "name": "hago clic en el botón de login",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:80"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:81"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 31624864
+              "duration": 27722299
             },
             "arguments": [],
             "keyword": "Then ",
             "line": 102,
             "name": "debería ver un mensaje de error \"Epic sadface: Username and password do not match any user in this service\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:120"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:118"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 3158043
+              "duration": 3321652
             },
             "arguments": [],
             "keyword": "And ",
             "line": 103,
             "name": "debería permanecer en la página de login",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:131"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:129"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 45503650
+              "duration": 52239035
             },
             "keyword": "After",
             "hidden": true
@@ -1259,7 +1258,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 36808275
+              "duration": 37879756
             },
             "keyword": "Before",
             "hidden": true
@@ -1267,85 +1266,85 @@
           {
             "result": {
               "status": "passed",
-              "duration": 580380099
+              "duration": 605143686
             },
             "arguments": [],
             "keyword": "Given ",
             "line": 7,
             "name": "navego a la página de login de SauceDemo",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:57"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:58"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 6488643
+              "duration": 8346413
             },
             "arguments": [],
             "keyword": "When ",
             "line": 107,
             "name": "ingreso el nombre de usuario \"standard_user \"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:72"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:73"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 2951183
+              "duration": 3377236
             },
             "arguments": [],
             "keyword": "And ",
             "line": 108,
             "name": "ingreso la contraseña \"secret_sauce\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:76"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:77"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 1092907374
+              "duration": 89219696
             },
             "arguments": [],
             "keyword": "And ",
             "line": 109,
             "name": "hago clic en el botón de login",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:80"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:81"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 31812256
+              "duration": 32614352
             },
             "arguments": [],
             "keyword": "Then ",
             "line": 110,
             "name": "debería ver un mensaje de error \"Epic sadface: Username and password do not match any user in this service\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:120"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:118"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 3282639
+              "duration": 3986896
             },
             "arguments": [],
             "keyword": "And ",
             "line": 111,
             "name": "debería permanecer en la página de login",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:131"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:129"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 48479099
+              "duration": 50838234
             },
             "keyword": "After",
             "hidden": true
@@ -1377,7 +1376,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 36355352
+              "duration": 38541313
             },
             "keyword": "Before",
             "hidden": true
@@ -1385,85 +1384,85 @@
           {
             "result": {
               "status": "passed",
-              "duration": 527290838
+              "duration": 588853968
             },
             "arguments": [],
             "keyword": "Given ",
             "line": 7,
             "name": "navego a la página de login de SauceDemo",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:57"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:58"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 6339072
+              "duration": 7467297
             },
             "arguments": [],
             "keyword": "When ",
             "line": 115,
             "name": "ingreso el nombre de usuario \"standard@@user\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:72"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:73"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 2785531
+              "duration": 3769455
             },
             "arguments": [],
             "keyword": "And ",
             "line": 116,
             "name": "ingreso la contraseña \"secret_sauce\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:76"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:77"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 1089497016
+              "duration": 88961559
             },
             "arguments": [],
             "keyword": "And ",
             "line": 117,
             "name": "hago clic en el botón de login",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:80"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:81"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 34243580
+              "duration": 32715441
             },
             "arguments": [],
             "keyword": "Then ",
             "line": 118,
             "name": "debería ver un mensaje de error \"Epic sadface: Username and password do not match any user in this service\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:120"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:118"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 2580887
+              "duration": 4915916
             },
             "arguments": [],
             "keyword": "And ",
             "line": 119,
             "name": "debería permanecer en la página de login",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:131"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:129"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 46254274
+              "duration": 50108648
             },
             "keyword": "After",
             "hidden": true
@@ -1495,7 +1494,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 37309011
+              "duration": 37461088
             },
             "keyword": "Before",
             "hidden": true
@@ -1503,85 +1502,85 @@
           {
             "result": {
               "status": "passed",
-              "duration": 612285524
+              "duration": 556333704
             },
             "arguments": [],
             "keyword": "Given ",
             "line": 7,
             "name": "navego a la página de login de SauceDemo",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:57"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:58"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 7269234
+              "duration": 7561464
             },
             "arguments": [],
             "keyword": "When ",
             "line": 123,
             "name": "ingreso el nombre de usuario \"user@saucedemo.com\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:72"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:73"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 2832651
+              "duration": 3214390
             },
             "arguments": [],
             "keyword": "And ",
             "line": 124,
             "name": "ingreso la contraseña \"secret_sauce\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:76"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:77"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 1090966757
+              "duration": 90404239
             },
             "arguments": [],
             "keyword": "And ",
             "line": 125,
             "name": "hago clic en el botón de login",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:80"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:81"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 32515402
+              "duration": 32315918
             },
             "arguments": [],
             "keyword": "Then ",
             "line": 126,
             "name": "debería ver un mensaje de error \"Epic sadface: Username and password do not match any user in this service\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:120"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:118"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 2986189
+              "duration": 3211473
             },
             "arguments": [],
             "keyword": "And ",
             "line": 127,
             "name": "debería permanecer en la página de login",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:131"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:129"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 46595918
+              "duration": 52749285
             },
             "keyword": "After",
             "hidden": true
@@ -1613,7 +1612,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 36347467
+              "duration": 37700428
             },
             "keyword": "Before",
             "hidden": true
@@ -1621,85 +1620,85 @@
           {
             "result": {
               "status": "passed",
-              "duration": 580100565
+              "duration": 587699281
             },
             "arguments": [],
             "keyword": "Given ",
             "line": 7,
             "name": "navego a la página de login de SauceDemo",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:57"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:58"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 6184941
+              "duration": 6333768
             },
             "arguments": [],
             "keyword": "When ",
             "line": 131,
             "name": "ingreso el nombre de usuario \"12345\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:72"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:73"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 2799397
+              "duration": 4480446
             },
             "arguments": [],
             "keyword": "And ",
             "line": 132,
             "name": "ingreso la contraseña \"secret_sauce\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:76"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:77"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 1090596689
+              "duration": 89824165
             },
             "arguments": [],
             "keyword": "And ",
             "line": 133,
             "name": "hago clic en el botón de login",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:80"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:81"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 33453230
+              "duration": 33015757
             },
             "arguments": [],
             "keyword": "Then ",
             "line": 134,
             "name": "debería ver un mensaje de error \"Epic sadface: Username and password do not match any user in this service\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:120"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:118"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 2509771
+              "duration": 3549902
             },
             "arguments": [],
             "keyword": "And ",
             "line": 135,
             "name": "debería permanecer en la página de login",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:131"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:129"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 45014789
+              "duration": 49467700
             },
             "keyword": "After",
             "hidden": true
@@ -1731,7 +1730,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 36073742
+              "duration": 37696791
             },
             "keyword": "Before",
             "hidden": true
@@ -1739,85 +1738,85 @@
           {
             "result": {
               "status": "passed",
-              "duration": 547972932
+              "duration": 608281209
             },
             "arguments": [],
             "keyword": "Given ",
             "line": 7,
             "name": "navego a la página de login de SauceDemo",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:57"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:58"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 6974951
+              "duration": 7280623
             },
             "arguments": [],
             "keyword": "When ",
             "line": 139,
             "name": "ingreso el nombre de usuario \"STANDARD_USER\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:72"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:73"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 2985238
+              "duration": 3705044
             },
             "arguments": [],
             "keyword": "And ",
             "line": 140,
             "name": "ingreso la contraseña \"secret_sauce\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:76"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:77"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 1090945168
+              "duration": 89053662
             },
             "arguments": [],
             "keyword": "And ",
             "line": 141,
             "name": "hago clic en el botón de login",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:80"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:81"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 32718396
+              "duration": 33246622
             },
             "arguments": [],
             "keyword": "Then ",
             "line": 142,
             "name": "debería ver un mensaje de error \"Epic sadface: Username and password do not match any user in this service\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:120"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:118"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 3406963
+              "duration": 3046432
             },
             "arguments": [],
             "keyword": "And ",
             "line": 143,
             "name": "debería permanecer en la página de login",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:131"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:129"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 49281944
+              "duration": 50708017
             },
             "keyword": "After",
             "hidden": true
@@ -1849,7 +1848,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 38209368
+              "duration": 37839840
             },
             "keyword": "Before",
             "hidden": true
@@ -1857,85 +1856,85 @@
           {
             "result": {
               "status": "passed",
-              "duration": 558924371
+              "duration": 606754200
             },
             "arguments": [],
             "keyword": "Given ",
             "line": 7,
             "name": "navego a la página de login de SauceDemo",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:57"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:58"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 5895054
+              "duration": 8255672
             },
             "arguments": [],
             "keyword": "When ",
             "line": 147,
             "name": "ingreso el nombre de usuario \"admin' OR '1'='1\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:72"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:73"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 2351172
+              "duration": 5052694
             },
             "arguments": [],
             "keyword": "And ",
             "line": 148,
             "name": "ingreso la contraseña \"secret_sauce\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:76"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:77"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 1091713618
+              "duration": 86809764
             },
             "arguments": [],
             "keyword": "And ",
             "line": 149,
             "name": "hago clic en el botón de login",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:80"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:81"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 31923688
+              "duration": 33161812
             },
             "arguments": [],
             "keyword": "Then ",
             "line": 150,
             "name": "debería ver un mensaje de error \"Epic sadface: Username and password do not match any user in this service\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:120"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:118"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 3020635
+              "duration": 3382546
             },
             "arguments": [],
             "keyword": "And ",
             "line": 151,
             "name": "debería permanecer en la página de login",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:131"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:129"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 45754102
+              "duration": 51601622
             },
             "keyword": "After",
             "hidden": true
@@ -1967,7 +1966,7 @@
           {
             "result": {
               "status": "passed",
-              "duration": 36110670
+              "duration": 37858736
             },
             "keyword": "Before",
             "hidden": true
@@ -1975,85 +1974,85 @@
           {
             "result": {
               "status": "passed",
-              "duration": 597737497
+              "duration": 589391670
             },
             "arguments": [],
             "keyword": "Given ",
             "line": 7,
             "name": "navego a la página de login de SauceDemo",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:57"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:58"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 6725690
+              "duration": 8005000
             },
             "arguments": [],
             "keyword": "When ",
             "line": 155,
             "name": "ingreso el nombre de usuario \"<script>alert('xss')</script>\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:72"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:73"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 2816359
+              "duration": 3520767
             },
             "arguments": [],
             "keyword": "And ",
             "line": 156,
             "name": "ingreso la contraseña \"secret_sauce\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:76"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:77"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 1090683195
+              "duration": 88613203
             },
             "arguments": [],
             "keyword": "And ",
             "line": 157,
             "name": "hago clic en el botón de login",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:80"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:81"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 33642327
+              "duration": 32621404
             },
             "arguments": [],
             "keyword": "Then ",
             "line": 158,
             "name": "debería ver un mensaje de error \"Epic sadface: Username and password do not match any user in this service\"",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:120"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:118"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 2862617
+              "duration": 3477214
             },
             "arguments": [],
             "keyword": "And ",
             "line": 159,
             "name": "debería permanecer en la página de login",
             "match": {
-              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:131"
+              "location": "automatizacion-web-playwright/support/step-definitions/loginSteps.ts:129"
             }
           },
           {
             "result": {
               "status": "passed",
-              "duration": 46170437
+              "duration": 54712386
             },
             "keyword": "After",
             "hidden": true
