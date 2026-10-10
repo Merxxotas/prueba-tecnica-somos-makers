@@ -5,7 +5,7 @@ import { createEsbuildPlugin } from "@badeball/cypress-cucumber-preprocessor/esb
 
 export default defineConfig({
   e2e: {
-    specPattern: "**/*.feature",
+    specPattern: "automatizacion-web-cypress/cypress/e2e/**/*.feature",
     baseUrl: "https://www.saucedemo.com",
     supportFile: "automatizacion-web-cypress/cypress/support/e2e.ts",
     fixturesFolder: "automatizacion-web-cypress/cypress/fixtures",
