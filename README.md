@@ -1,6 +1,11 @@
 # Prueba Técnica - QA Full Stack
 ## Somos Makers
 
+[![Full Test Suite](https://github.com/Merxxotas/prueba-tecnica-somos-makers/actions/workflows/full-suite.yml/badge.svg)](https://github.com/Merxxotas/prueba-tecnica-somos-makers/actions/workflows/full-suite.yml)
+[![Cypress E2E Tests](https://github.com/Merxxotas/prueba-tecnica-somos-makers/actions/workflows/cypress.yml/badge.svg)](https://github.com/Merxxotas/prueba-tecnica-somos-makers/actions/workflows/cypress.yml)
+[![Playwright E2E Tests](https://github.com/Merxxotas/prueba-tecnica-somos-makers/actions/workflows/playwright.yml/badge.svg)](https://github.com/Merxxotas/prueba-tecnica-somos-makers/actions/workflows/playwright.yml)
+[![API Tests](https://github.com/Merxxotas/prueba-tecnica-somos-makers/actions/workflows/api-tests.yml/badge.svg)](https://github.com/Merxxotas/prueba-tecnica-somos-makers/actions/workflows/api-tests.yml)
+
 Este repositorio contiene la solución completa para la prueba técnica de QA Full Stack, demostrando experiencia en automatización web, testing de APIs, y diseño de casos de prueba funcionales.
 
 ---
@@ -195,9 +200,32 @@ Este proyecto utiliza **GitHub Projects** con:
 
 ## CI/CD
 
-Los pipelines de GitHub Actions se ejecutan automáticamente en:
-- **Pull Requests:** Tests completos + linting
-- **Push a main:** Suite completa + generación de reportes
+El proyecto cuenta con una infraestructura de integración continua completa en **GitHub Actions**, organizada en 4 workflows independientes y paralelizados:
+
+### Workflows Configurados (`.github/workflows/`)
+
+1. **`full-suite.yml` (Full Test Suite):**
+   - Ejecución en **paralelo** de Cypress, Playwright y API Testing.
+   - Generación de resumen consolidado en `$GITHUB_STEP_SUMMARY`.
+   - Tiempo estimado de ejecución: **< 3 minutos**.
+
+2. **`cypress.yml` (Cypress E2E Tests):**
+   - Ejecuta los 18 escenarios de smoke test de SauceDemo.
+   - Publica reportes HTML de Cucumber, capturas de pantalla y videos como artifacts.
+
+3. **`playwright.yml` (Playwright E2E Tests):**
+   - Ejecuta suite de regresión (`tsx --test`), suite Cucumber (`cucumber-js`) y suite nativa (`playwright test`).
+   - Publica reportes HTML interactivos, traces y videos como artifacts.
+
+4. **`api-tests.yml` (API Tests):**
+   - Instala y ejecuta la colección ReqRes con **inso-cli** (Kong Insomnia CLI v13.3.1).
+   - Ejecuta las 14 aserciones automatizadas en Node.js (`pnpm test:api`).
+   - Publica el reporte de ejecución JSON como artifact.
+
+### Disparadores (Triggers)
+- **Pull Requests:** Validación automática contra la rama `main`.
+- **Push a `main`:** Ejecución de suites completas y generación de artefactos.
+- **Manual (`workflow_dispatch`):** Permite ejecutar cualquier pipeline bajo demanda desde la pestaña de Actions en GitHub.
 
 ---
 

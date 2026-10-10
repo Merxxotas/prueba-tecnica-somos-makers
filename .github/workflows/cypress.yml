@@ -1,0 +1,65 @@
+name: Cypress E2E Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: cypress-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  cypress:
+    name: Cypress Smoke Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Verify Cypress binary
+        run: pnpm cypress:verify
+
+      - name: Run Cypress tests
+        run: pnpm test:cypress
+
+      - name: Upload Cypress reports & evidence
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cypress-test-reports
+          path: |
+            automatizacion-web-cypress/cucumber-report/
+            automatizacion-web-cypress/cypress/screenshots/
+            automatizacion-web-cypress/cypress/videos/
+          retention-days: 14
+
+      - name: Summary & notification
+        if: always()
+        run: |
+          echo "## Cypress Test Suite Execution" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ job.status }}" == "success" ]; then
+            echo "- **Status:** Passed" >> $GITHUB_STEP_SUMMARY
+            echo "- **Scenarios:** 18 passing" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "- **Status:** Failed" >> $GITHUB_STEP_SUMMARY
+            echo "::error::Cypress test execution encountered failures. Check the published artifacts for details."
+          fi

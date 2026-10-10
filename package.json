@@ -14,6 +14,7 @@
     "test:playwright:regression": "tsx --test automatizacion-web-playwright/tests/*.test.ts",
     "playwright:install": "playwright install chromium",
     "test:api": "node scripts/test-api.js",
+    "test:api:inso": "inso-cli run collection wrk_main -w pruebas-api/insomnia/reqres-api-collection.json -e env_base",
     "evidencias": "node scripts/capturar-evidencias.js"
   },
   "keywords": [
