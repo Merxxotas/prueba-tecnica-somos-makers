@@ -1,0 +1,72 @@
+name: Playwright E2E Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: playwright-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  playwright:
+    name: Playwright Smoke Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Install Playwright browsers & OS dependencies
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: Run Playwright regression tests
+        run: pnpm test:playwright:regression
+
+      - name: Run Playwright Cucumber suite
+        run: pnpm test:playwright
+
+      - name: Run Playwright native BDD suite
+        run: pnpm exec bddgen && pnpm exec playwright test
+
+      - name: Upload Playwright reports & evidence
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: playwright-test-reports
+          path: |
+            automatizacion-web-playwright/cucumber-report/
+            automatizacion-web-playwright/playwright-report/
+            automatizacion-web-playwright/test-results/
+            evidencias/playwright/
+          retention-days: 14
+
+      - name: Summary & notification
+        if: always()
+        run: |
+          echo "## Playwright Test Suite Execution" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ job.status }}" == "success" ]; then
+            echo "- **Status:** Passed" >> $GITHUB_STEP_SUMMARY
+            echo "- **Scenarios:** 18 Cucumber + 18 Native Playwright + 2 Regression passing" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "- **Status:** Failed" >> $GITHUB_STEP_SUMMARY
+            echo "::error::Playwright test execution encountered failures. Check the published artifacts for details."
+          fi

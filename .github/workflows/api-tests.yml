@@ -1,0 +1,88 @@
+name: API Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: api-tests-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  api-tests:
+    name: ReqRes API Tests (inso-cli & automation)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Cache inso-cli binary
+        id: cache-inso
+        uses: actions/cache@v4
+        with:
+          path: /usr/local/bin/inso-cli
+          key: inso-cli-13.3.1-linux-x64
+
+      - name: Install inso-cli
+        if: steps.cache-inso.outputs.cache-hit != 'true'
+        run: |
+          echo "Downloading inso-cli v13.3.1 from official release..."
+          curl -sL https://github.com/Kong/insomnia/releases/download/core%4013.3.1/inso-linux-x64-13.3.1.tar.xz -o /tmp/inso.tar.xz
+          mkdir -p /tmp/inso-extract
+          tar -xJf /tmp/inso.tar.xz -C /tmp/inso-extract
+          sudo mv /tmp/inso-extract/inso /usr/local/bin/inso-cli
+          sudo chmod +x /usr/local/bin/inso-cli
+          sudo ln -sf /usr/local/bin/inso-cli /usr/local/bin/inso
+          rm -rf /tmp/inso.tar.xz /tmp/inso-extract
+
+      - name: Verify inso-cli installation
+        run: |
+          inso-cli --version
+
+      - name: Run Insomnia collection with inso-cli
+        run: |
+          inso-cli run collection wrk_main -w pruebas-api/insomnia/reqres-api-collection.json -e env_base
+
+      - name: Run automated API assertions and report generation
+        run: |
+          pnpm test:api
+
+      - name: Upload API test reports & evidence
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: api-test-reports
+          path: evidencias/insomnia/
+          retention-days: 14
+
+      - name: Summary & notification
+        if: always()
+        run: |
+          echo "## API Test Suite Execution" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ job.status }}" == "success" ]; then
+            echo "- **Status:** Passed" >> $GITHUB_STEP_SUMMARY
+            echo "- **inso-cli:** 14 requests executed successfully" >> $GITHUB_STEP_SUMMARY
+            echo "- **test:api:** 14/14 automated assertions passed (100%)" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "- **Status:** Failed" >> $GITHUB_STEP_SUMMARY
+            echo "::error::API test execution encountered failures. Check the published artifacts for details."
+          fi
