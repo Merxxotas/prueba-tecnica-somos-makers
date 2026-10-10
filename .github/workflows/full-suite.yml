@@ -11,6 +11,11 @@ concurrency:
   group: full-suite-${{ github.ref }}
   cancel-in-progress: true
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   cypress:
     name: Cypress E2E
@@ -34,6 +39,17 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+
+      - name: Cache Cypress binary
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/Cypress
+          key: cypress-binary-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            cypress-binary-${{ runner.os }}-
+
+      - name: Install Cypress binary
+        run: pnpm exec cypress install
 
       - name: Verify Cypress binary
         run: pnpm cypress:verify
@@ -178,3 +194,70 @@ jobs:
             echo "::error::One or more test suites failed in the full suite run."
             exit 1
           fi
+
+  deploy-pages:
+    name: Deploy Reports to GitHub Pages
+    runs-on: ubuntu-latest
+    needs: [cypress, playwright, api-tests, suite-summary]
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Download Cypress reports
+        uses: actions/download-artifact@v4
+        with:
+          name: full-suite-cypress-reports
+          path: /tmp/cypress-reports
+
+      - name: Download Playwright reports
+        uses: actions/download-artifact@v4
+        with:
+          name: full-suite-playwright-reports
+          path: /tmp/playwright-reports
+
+      - name: Download API reports
+        uses: actions/download-artifact@v4
+        with:
+          name: full-suite-api-reports
+          path: /tmp/api-reports
+
+      - name: Assemble GitHub Pages site
+        run: |
+          mkdir -p public/cypress public/playwright public/playwright-report public/api
+          
+          if [ -d "/tmp/cypress-reports/cucumber-report" ]; then
+            cp -r /tmp/cypress-reports/cucumber-report/* public/cypress/ || true
+          fi
+          
+          if [ -d "/tmp/playwright-reports/cucumber-report" ]; then
+            cp -r /tmp/playwright-reports/cucumber-report/* public/playwright/ || true
+          fi
+          if [ -d "/tmp/playwright-reports/playwright-report" ]; then
+            cp -r /tmp/playwright-reports/playwright-report/* public/playwright-report/ || true
+          fi
+          
+          if [ -f "/tmp/api-reports/test-report.json" ]; then
+            cp /tmp/api-reports/test-report.json public/api/ || true
+          elif [ -f "evidencias/insomnia/test-report.json" ]; then
+            cp evidencias/insomnia/test-report.json public/api/ || true
+          fi
+
+          node scripts/generate-landing.js public
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+

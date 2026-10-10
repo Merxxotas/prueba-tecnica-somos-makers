@@ -83,7 +83,14 @@ async function executeRequest(request) {
     }
     
     // Ejecutar request
-    const response = await fetch(url, options);
+    let response = await fetch(url, options);
+
+    // Si la API key alcanza la cuota diaria (HTTP 429), reintentar sin api_key
+    if (response.status === 429 && apiKey) {
+      const fallbackUrl = url.replace(/([?&])api_key=[^&]+(&|$)/, (m, p1, p2) => (p1 === '?' && p2 === '&') ? '?' : (p1 === '?' ? '' : p2));
+      response = await fetch(fallbackUrl, options);
+    }
+
     const duration = Date.now() - startTime;
     
     // Leer body de respuesta

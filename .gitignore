@@ -24,6 +24,7 @@ automatizacion-web-playwright/playwright-report/
 automatizacion-web-playwright/cucumber-report/
 automatizacion-web-playwright/.auth/
 .features-gen/
+/public/
 
 # Evidencias - incluir en el repositorio para la prueba técnica
 # (no se excluyen para poder commitear las evidencias)
