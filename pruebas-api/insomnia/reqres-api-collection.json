@@ -632,8 +632,8 @@
       "name": "Fallback Environment",
       "data": {
         "baseURL": "https://reqres.in",
-        "publicKey": "",
-        "serverKey": ""
+        "publicKey": "pub_415f86aadf410b4f5366ae22a4b444ade5921655d83910d720fa2c34cc839564",
+        "serverKey": "pro_f414ba62e993442165cc4923f98e9e5a04115a2ff8bda929ce578592a5a9f365"
       },
       "dataPropertyOrder": {
         "&": [

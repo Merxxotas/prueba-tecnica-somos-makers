@@ -1,48 +1,89 @@
 {
-  "timestamp": "2026-10-10T01:23:32.957Z",
+  "timestamp": "2026-10-10T01:28:46.021Z",
   "stats": {
     "total": 14,
     "passed": 14,
     "failed": 0,
-    "duration": 13872
+    "duration": 13769
   },
   "results": [
     {
       "name": "GET - Listar Usuarios (Paginado)",
       "method": "GET",
       "url": "https://reqres.in/api/users?page=2&api_key=pub_2da57b437efbad555deb2c2e4360f55fa944ea68bb437ad6a82d38bda82d16d7",
-      "status": 429,
+      "status": 200,
       "statusText": "",
-      "duration": 698,
+      "duration": 776,
       "passed": true,
-      "isRateLimited": true,
+      "isRateLimited": false,
       "expectedStatuses": [
         200
       ],
       "responseBody": {
-        "error": "rate_limit_exceeded",
-        "message": "You've hit the anonymous demo limit of 40 requests/day from this IP.",
-        "signup": {
-          "message": "Create a free account for a higher daily limit, your own API key, persistent collections, and auth.",
-          "url": "https://app.reqres.in/sign-up?source=demo_rate_limit"
+        "page": 2,
+        "per_page": 6,
+        "total": 12,
+        "total_pages": 2,
+        "data": [
+          {
+            "id": 7,
+            "email": "michael.lawson@reqres.in",
+            "first_name": "Michael",
+            "last_name": "Lawson",
+            "avatar": "https://reqres.in/img/faces/7-image.jpg"
+          },
+          {
+            "id": 8,
+            "email": "lindsay.ferguson@reqres.in",
+            "first_name": "Lindsay",
+            "last_name": "Ferguson",
+            "avatar": "https://reqres.in/img/faces/8-image.jpg"
+          },
+          {
+            "id": 9,
+            "email": "tobias.funke@reqres.in",
+            "first_name": "Tobias",
+            "last_name": "Funke",
+            "avatar": "https://reqres.in/img/faces/9-image.jpg"
+          },
+          {
+            "id": 10,
+            "email": "byron.fields@reqres.in",
+            "first_name": "Byron",
+            "last_name": "Fields",
+            "avatar": "https://reqres.in/img/faces/10-image.jpg"
+          },
+          {
+            "id": 11,
+            "email": "george.edwards@reqres.in",
+            "first_name": "George",
+            "last_name": "Edwards",
+            "avatar": "https://reqres.in/img/faces/11-image.jpg"
+          },
+          {
+            "id": 12,
+            "email": "rachel.howell@reqres.in",
+            "first_name": "Rachel",
+            "last_name": "Howell",
+            "avatar": "https://reqres.in/img/faces/12-image.jpg"
+          }
+        ],
+        "support": {
+          "url": "https://benhowdle.im/first-cto-playbook?utm_source=reqres&utm_medium=json&utm_campaign=referral",
+          "text": "Become a better CTO. A playbook of painful stories and practical advice from a two-time startup CTO."
         },
-        "limit": 40,
-        "remaining": 0,
-        "reset_at": 1791676800,
-        "resets_in": "22h 36m",
-        "reset_explanation": "Limits reset daily at midnight UTC",
         "_meta": {
           "powered_by": "ReqRes",
           "docs_url": "https://app.reqres.in/documentation",
           "upgrade_url": "https://app.reqres.in/upgrade",
           "example_url": "https://app.reqres.in/examples/notes-app",
           "variant": "v1_a",
-          "message": "Rate limited to keep ReqRes free. Projects unlock higher limits + logs.",
+          "message": "Your data persists here. Add auth, logs, and custom schemas to build a real backend.",
           "cta": {
-            "label": "Upgrade",
-            "url": "https://app.reqres.in/upgrade"
+            "label": "See example app",
+            "url": "https://app.reqres.in/examples/notes-app"
           },
-          "context": "rate_limited"
+          "context": "legacy_success"
         }
       }
     },
@@ -50,38 +91,38 @@
       "name": "GET - Obtener Usuario por ID",
       "method": "GET",
       "url": "https://reqres.in/api/users/2?api_key=pub_2da57b437efbad555deb2c2e4360f55fa944ea68bb437ad6a82d38bda82d16d7",
-      "status": 429,
+      "status": 200,
       "statusText": "",
-      "duration": 1526,
+      "duration": 364,
       "passed": true,
-      "isRateLimited": true,
+      "isRateLimited": false,
       "expectedStatuses": [
         200
       ],
       "responseBody": {
-        "error": "rate_limit_exceeded",
-        "message": "You've hit the anonymous demo limit of 40 requests/day from this IP.",
-        "signup": {
-          "message": "Create a free account for a higher daily limit, your own API key, persistent collections, and auth.",
-          "url": "https://app.reqres.in/sign-up?source=demo_rate_limit"
+        "data": {
+          "id": 2,
+          "email": "janet.weaver@reqres.in",
+          "first_name": "Janet",
+          "last_name": "Weaver",
+          "avatar": "https://reqres.in/img/faces/2-image.jpg"
         },
-        "limit": 40,
-        "remaining": 0,
-        "reset_at": 1791676800,
-        "resets_in": "22h 36m",
-        "reset_explanation": "Limits reset daily at midnight UTC",
+        "support": {
+          "url": "https://benhowdle.im/first-cto-playbook?utm_source=reqres&utm_medium=json&utm_campaign=referral",
+          "text": "Become a better CTO. A playbook of painful stories and practical advice from a two-time startup CTO."
+        },
         "_meta": {
           "powered_by": "ReqRes",
           "docs_url": "https://app.reqres.in/documentation",
           "upgrade_url": "https://app.reqres.in/upgrade",
           "example_url": "https://app.reqres.in/examples/notes-app",
           "variant": "v1_a",
-          "message": "Rate limited to keep ReqRes free. Projects unlock higher limits + logs.",
+          "message": "Your data persists here. Add auth, logs, and custom schemas to build a real backend.",
           "cta": {
-            "label": "Upgrade",
-            "url": "https://app.reqres.in/upgrade"
+            "label": "See example app",
+            "url": "https://app.reqres.in/examples/notes-app"
           },
-          "context": "rate_limited"
+          "context": "legacy_success"
         }
       }
     },
@@ -89,78 +130,46 @@
       "name": "GET - Usuario No Encontrado",
       "method": "GET",
       "url": "https://reqres.in/api/users/999?api_key=pub_2da57b437efbad555deb2c2e4360f55fa944ea68bb437ad6a82d38bda82d16d7",
-      "status": 429,
+      "status": 404,
       "statusText": "",
-      "duration": 1539,
+      "duration": 1573,
       "passed": true,
-      "isRateLimited": true,
+      "isRateLimited": false,
       "expectedStatuses": [
         400,
         404
       ],
-      "responseBody": {
-        "error": "rate_limit_exceeded",
-        "message": "You've hit the anonymous demo limit of 40 requests/day from this IP.",
-        "signup": {
-          "message": "Create a free account for a higher daily limit, your own API key, persistent collections, and auth.",
-          "url": "https://app.reqres.in/sign-up?source=demo_rate_limit"
-        },
-        "limit": 40,
-        "remaining": 0,
-        "reset_at": 1791676800,
-        "resets_in": "22h 36m",
-        "reset_explanation": "Limits reset daily at midnight UTC",
-        "_meta": {
-          "powered_by": "ReqRes",
-          "docs_url": "https://app.reqres.in/documentation",
-          "upgrade_url": "https://app.reqres.in/upgrade",
-          "example_url": "https://app.reqres.in/examples/notes-app",
-          "variant": "v1_a",
-          "message": "Rate limited to keep ReqRes free. Projects unlock higher limits + logs.",
-          "cta": {
-            "label": "Upgrade",
-            "url": "https://app.reqres.in/upgrade"
-          },
-          "context": "rate_limited"
-        }
-      }
+      "responseBody": {}
     },
     {
       "name": "POST - Crear Usuario",
       "method": "POST",
       "url": "https://reqres.in/api/users?api_key=pub_2da57b437efbad555deb2c2e4360f55fa944ea68bb437ad6a82d38bda82d16d7",
-      "status": 429,
+      "status": 201,
       "statusText": "",
-      "duration": 435,
+      "duration": 468,
       "passed": true,
-      "isRateLimited": true,
+      "isRateLimited": false,
       "expectedStatuses": [
         201
       ],
       "responseBody": {
-        "error": "rate_limit_exceeded",
-        "message": "You've hit the anonymous demo limit of 40 requests/day from this IP.",
-        "signup": {
-          "message": "Create a free account for a higher daily limit, your own API key, persistent collections, and auth.",
-          "url": "https://app.reqres.in/sign-up?source=demo_rate_limit"
-        },
-        "limit": 40,
-        "remaining": 0,
-        "reset_at": 1791676800,
-        "resets_in": "22h 36m",
-        "reset_explanation": "Limits reset daily at midnight UTC",
+        "name": "Juan Pérez",
+        "job": "QA Automation Engineer",
+        "id": "400",
+        "createdAt": "2026-10-10T01:28:34.244Z",
         "_meta": {
           "powered_by": "ReqRes",
           "docs_url": "https://app.reqres.in/documentation",
           "upgrade_url": "https://app.reqres.in/upgrade",
           "example_url": "https://app.reqres.in/examples/notes-app",
           "variant": "v1_a",
-          "message": "Rate limited to keep ReqRes free. Projects unlock higher limits + logs.",
+          "message": "Your data persists here. Add auth, logs, and custom schemas to build a real backend.",
           "cta": {
-            "label": "Upgrade",
-            "url": "https://app.reqres.in/upgrade"
+            "label": "See example app",
+            "url": "https://app.reqres.in/examples/notes-app"
           },
-          "context": "rate_limited"
+          "context": "legacy_success"
         }
       }
     },
@@ -168,38 +177,30 @@
       "name": "PUT - Actualizar Usuario (Completo)",
       "method": "PUT",
       "url": "https://reqres.in/api/users/2?api_key=pub_2da57b437efbad555deb2c2e4360f55fa944ea68bb437ad6a82d38bda82d16d7",
-      "status": 429,
+      "status": 200,
       "statusText": "",
-      "duration": 329,
+      "duration": 372,
       "passed": true,
-      "isRateLimited": true,
+      "isRateLimited": false,
       "expectedStatuses": [
         200
       ],
       "responseBody": {
-        "error": "rate_limit_exceeded",
-        "message": "You've hit the anonymous demo limit of 40 requests/day from this IP.",
-        "signup": {
-          "message": "Create a free account for a higher daily limit, your own API key, persistent collections, and auth.",
-          "url": "https://app.reqres.in/sign-up?source=demo_rate_limit"
-        },
-        "limit": 40,
-        "remaining": 0,
-        "reset_at": 1791676800,
-        "resets_in": "22h 36m",
-        "reset_explanation": "Limits reset daily at midnight UTC",
+        "name": "Juan Pérez Actualizado",
+        "job": "Senior QA Engineer",
+        "updatedAt": "2026-10-10T01:28:34.716Z",
         "_meta": {
           "powered_by": "ReqRes",
           "docs_url": "https://app.reqres.in/documentation",
           "upgrade_url": "https://app.reqres.in/upgrade",
           "example_url": "https://app.reqres.in/examples/notes-app",
           "variant": "v1_a",
-          "message": "Rate limited to keep ReqRes free. Projects unlock higher limits + logs.",
+          "message": "Your data persists here. Add auth, logs, and custom schemas to build a real backend.",
           "cta": {
-            "label": "Upgrade",
-            "url": "https://app.reqres.in/upgrade"
+            "label": "See example app",
+            "url": "https://app.reqres.in/examples/notes-app"
           },
-          "context": "rate_limited"
+          "context": "legacy_success"
         }
       }
     },
@@ -207,38 +208,29 @@
       "name": "PATCH - Actualizar Usuario (Parcial)",
       "method": "PATCH",
       "url": "https://reqres.in/api/users/2?api_key=pub_2da57b437efbad555deb2c2e4360f55fa944ea68bb437ad6a82d38bda82d16d7",
-      "status": 429,
+      "status": 200,
       "statusText": "",
-      "duration": 330,
+      "duration": 365,
       "passed": true,
-      "isRateLimited": true,
+      "isRateLimited": false,
       "expectedStatuses": [
         200
       ],
       "responseBody": {
-        "error": "rate_limit_exceeded",
-        "message": "You've hit the anonymous demo limit of 40 requests/day from this IP.",
-        "signup": {
-          "message": "Create a free account for a higher daily limit, your own API key, persistent collections, and auth.",
-          "url": "https://app.reqres.in/sign-up?source=demo_rate_limit"
-        },
-        "limit": 40,
-        "remaining": 0,
-        "reset_at": 1791676800,
-        "resets_in": "22h 36m",
-        "reset_explanation": "Limits reset daily at midnight UTC",
+        "job": "Lead QA Engineer",
+        "updatedAt": "2026-10-10T01:28:35.184Z",
         "_meta": {
           "powered_by": "ReqRes",
           "docs_url": "https://app.reqres.in/documentation",
           "upgrade_url": "https://app.reqres.in/upgrade",
           "example_url": "https://app.reqres.in/examples/notes-app",
           "variant": "v1_a",
-          "message": "Rate limited to keep ReqRes free. Projects unlock higher limits + logs.",
+          "message": "Your data persists here. Add auth, logs, and custom schemas to build a real backend.",
           "cta": {
-            "label": "Upgrade",
-            "url": "https://app.reqres.in/upgrade"
+            "label": "See example app",
+            "url": "https://app.reqres.in/examples/notes-app"
           },
-          "context": "rate_limited"
+          "context": "legacy_success"
         }
       }
     },
@@ -246,77 +238,93 @@
       "name": "DELETE - Eliminar Usuario",
       "method": "DELETE",
       "url": "https://reqres.in/api/users/2?api_key=pub_2da57b437efbad555deb2c2e4360f55fa944ea68bb437ad6a82d38bda82d16d7",
-      "status": 429,
+      "status": 204,
       "statusText": "",
-      "duration": 330,
+      "duration": 363,
       "passed": true,
-      "isRateLimited": true,
+      "isRateLimited": false,
       "expectedStatuses": [
         204
       ],
-      "responseBody": {
-        "error": "rate_limit_exceeded",
-        "message": "You've hit the anonymous demo limit of 40 requests/day from this IP.",
-        "signup": {
-          "message": "Create a free account for a higher daily limit, your own API key, persistent collections, and auth.",
-          "url": "https://app.reqres.in/sign-up?source=demo_rate_limit"
-        },
-        "limit": 40,
-        "remaining": 0,
-        "reset_at": 1791676800,
-        "resets_in": "22h 36m",
-        "reset_explanation": "Limits reset daily at midnight UTC",
-        "_meta": {
-          "powered_by": "ReqRes",
-          "docs_url": "https://app.reqres.in/documentation",
-          "upgrade_url": "https://app.reqres.in/upgrade",
-          "example_url": "https://app.reqres.in/examples/notes-app",
-          "variant": "v1_a",
-          "message": "Rate limited to keep ReqRes free. Projects unlock higher limits + logs.",
-          "cta": {
-            "label": "Upgrade",
-            "url": "https://app.reqres.in/upgrade"
-          },
-          "context": "rate_limited"
-        }
-      }
+      "responseBody": ""
     },
     {
       "name": "GET - Listar Recursos",
       "method": "GET",
       "url": "https://reqres.in/api/unknown?api_key=pub_2da57b437efbad555deb2c2e4360f55fa944ea68bb437ad6a82d38bda82d16d7",
-      "status": 429,
+      "status": 200,
       "statusText": "",
-      "duration": 538,
+      "duration": 574,
       "passed": true,
-      "isRateLimited": true,
+      "isRateLimited": false,
       "expectedStatuses": [
         200
       ],
       "responseBody": {
-        "error": "rate_limit_exceeded",
-        "message": "You've hit the anonymous demo limit of 40 requests/day from this IP.",
-        "signup": {
-          "message": "Create a free account for a higher daily limit, your own API key, persistent collections, and auth.",
-          "url": "https://app.reqres.in/sign-up?source=demo_rate_limit"
+        "page": 1,
+        "per_page": 6,
+        "total": 12,
+        "total_pages": 2,
+        "data": [
+          {
+            "id": 1,
+            "name": "cerulean",
+            "year": 2000,
+            "color": "#98B2D1",
+            "pantone_value": "15-4020"
+          },
+          {
+            "id": 2,
+            "name": "fuchsia rose",
+            "year": 2001,
+            "color": "#C74375",
+            "pantone_value": "17-2031"
+          },
+          {
+            "id": 3,
+            "name": "true red",
+            "year": 2002,
+            "color": "#BF1932",
+            "pantone_value": "19-1664"
+          },
+          {
+            "id": 4,
+            "name": "aqua sky",
+            "year": 2003,
+            "color": "#7BC4C4",
+            "pantone_value": "14-4811"
+          },
+          {
+            "id": 5,
+            "name": "tigerlily",
+            "year": 2004,
+            "color": "#E2583E",
+            "pantone_value": "17-1456"
+          },
+          {
+            "id": 6,
+            "name": "blue turquoise",
+            "year": 2005,
+            "color": "#53B0AE",
+            "pantone_value": "15-5217"
+          }
+        ],
+        "support": {
+          "url": "https://benhowdle.im/first-cto-playbook?utm_source=reqres&utm_medium=json&utm_campaign=referral",
+          "text": "Become a better CTO. A playbook of painful stories and practical advice from a two-time startup CTO."
         },
-        "limit": 40,
-        "remaining": 0,
-        "reset_at": 1791676800,
-        "resets_in": "22h 36m",
-        "reset_explanation": "Limits reset daily at midnight UTC",
         "_meta": {
           "powered_by": "ReqRes",
           "docs_url": "https://app.reqres.in/documentation",
           "upgrade_url": "https://app.reqres.in/upgrade",
           "example_url": "https://app.reqres.in/examples/notes-app",
           "variant": "v1_a",
-          "message": "Rate limited to keep ReqRes free. Projects unlock higher limits + logs.",
+          "message": "Your data persists here. Add auth, logs, and custom schemas to build a real backend.",
           "cta": {
-            "label": "Upgrade",
-            "url": "https://app.reqres.in/upgrade"
+            "label": "See example app",
+            "url": "https://app.reqres.in/examples/notes-app"
           },
-          "context": "rate_limited"
+          "context": "legacy_success"
         }
       }
     },
@@ -324,38 +332,38 @@
       "name": "GET - Obtener Recurso por ID",
       "method": "GET",
       "url": "https://reqres.in/api/unknown/2?api_key=pub_2da57b437efbad555deb2c2e4360f55fa944ea68bb437ad6a82d38bda82d16d7",
-      "status": 429,
+      "status": 200,
       "statusText": "",
-      "duration": 523,
+      "duration": 556,
       "passed": true,
-      "isRateLimited": true,
+      "isRateLimited": false,
       "expectedStatuses": [
         200
       ],
       "responseBody": {
-        "error": "rate_limit_exceeded",
-        "message": "You've hit the anonymous demo limit of 40 requests/day from this IP.",
-        "signup": {
-          "message": "Create a free account for a higher daily limit, your own API key, persistent collections, and auth.",
-          "url": "https://app.reqres.in/sign-up?source=demo_rate_limit"
+        "data": {
+          "id": 2,
+          "name": "fuchsia rose",
+          "year": 2001,
+          "color": "#C74375",
+          "pantone_value": "17-2031"
         },
-        "limit": 40,
-        "remaining": 0,
-        "reset_at": 1791676800,
-        "resets_in": "22h 36m",
-        "reset_explanation": "Limits reset daily at midnight UTC",
+        "support": {
+          "url": "https://benhowdle.im/first-cto-playbook?utm_source=reqres&utm_medium=json&utm_campaign=referral",
+          "text": "Become a better CTO. A playbook of painful stories and practical advice from a two-time startup CTO."
+        },
         "_meta": {
           "powered_by": "ReqRes",
           "docs_url": "https://app.reqres.in/documentation",
           "upgrade_url": "https://app.reqres.in/upgrade",
           "example_url": "https://app.reqres.in/examples/notes-app",
           "variant": "v1_a",
-          "message": "Rate limited to keep ReqRes free. Projects unlock higher limits + logs.",
+          "message": "Your data persists here. Add auth, logs, and custom schemas to build a real backend.",
           "cta": {
-            "label": "Upgrade",
-            "url": "https://app.reqres.in/upgrade"
+            "label": "See example app",
+            "url": "https://app.reqres.in/examples/notes-app"
           },
-          "context": "rate_limited"
+          "context": "legacy_success"
         }
       }
     },
@@ -363,38 +371,29 @@
       "name": "POST - Registro Exitoso",
       "method": "POST",
       "url": "https://reqres.in/api/register?api_key=pub_2da57b437efbad555deb2c2e4360f55fa944ea68bb437ad6a82d38bda82d16d7",
-      "status": 429,
+      "status": 200,
       "statusText": "",
-      "duration": 323,
+      "duration": 357,
       "passed": true,
-      "isRateLimited": true,
+      "isRateLimited": false,
       "expectedStatuses": [
         200
       ],
       "responseBody": {
-        "error": "rate_limit_exceeded",
-        "message": "You've hit the anonymous demo limit of 40 requests/day from this IP.",
-        "signup": {
-          "message": "Create a free account for a higher daily limit, your own API key, persistent collections, and auth.",
-          "url": "https://app.reqres.in/sign-up?source=demo_rate_limit"
-        },
-        "limit": 40,
-        "remaining": 0,
-        "reset_at": 1791676800,
-        "resets_in": "22h 36m",
-        "reset_explanation": "Limits reset daily at midnight UTC",
+        "id": 4,
+        "token": "QpwL5tke4Pnpja7X4",
         "_meta": {
           "powered_by": "ReqRes",
           "docs_url": "https://app.reqres.in/documentation",
           "upgrade_url": "https://app.reqres.in/upgrade",
           "example_url": "https://app.reqres.in/examples/notes-app",
           "variant": "v1_a",
-          "message": "Rate limited to keep ReqRes free. Projects unlock higher limits + logs.",
+          "message": "Your data persists here. Add auth, logs, and custom schemas to build a real backend.",
           "cta": {
-            "label": "Upgrade",
-            "url": "https://app.reqres.in/upgrade"
+            "label": "See example app",
+            "url": "https://app.reqres.in/examples/notes-app"
           },
-          "context": "rate_limited"
+          "context": "legacy_success"
         }
       }
     },
@@ -402,78 +401,45 @@
       "name": "POST - Registro Fallido (Sin Password)",
       "method": "POST",
       "url": "https://reqres.in/api/register?api_key=pub_2da57b437efbad555deb2c2e4360f55fa944ea68bb437ad6a82d38bda82d16d7",
-      "status": 429,
+      "status": 400,
       "statusText": "",
-      "duration": 320,
+      "duration": 941,
       "passed": true,
-      "isRateLimited": true,
+      "isRateLimited": false,
       "expectedStatuses": [
         400,
         404
       ],
       "responseBody": {
-        "error": "rate_limit_exceeded",
-        "message": "You've hit the anonymous demo limit of 40 requests/day from this IP.",
-        "signup": {
-          "message": "Create a free account for a higher daily limit, your own API key, persistent collections, and auth.",
-          "url": "https://app.reqres.in/sign-up?source=demo_rate_limit"
-        },
-        "limit": 40,
-        "remaining": 0,
-        "reset_at": 1791676800,
-        "resets_in": "22h 36m",
-        "reset_explanation": "Limits reset daily at midnight UTC",
-        "_meta": {
-          "powered_by": "ReqRes",
-          "docs_url": "https://app.reqres.in/documentation",
-          "upgrade_url": "https://app.reqres.in/upgrade",
-          "example_url": "https://app.reqres.in/examples/notes-app",
-          "variant": "v1_a",
-          "message": "Rate limited to keep ReqRes free. Projects unlock higher limits + logs.",
-          "cta": {
-            "label": "Upgrade",
-            "url": "https://app.reqres.in/upgrade"
-          },
-          "context": "rate_limited"
-        }
+        "error": "Missing password"
       }
     },
     {
       "name": "POST - Login Exitoso",
       "method": "POST",
       "url": "https://reqres.in/api/login?api_key=pub_2da57b437efbad555deb2c2e4360f55fa944ea68bb437ad6a82d38bda82d16d7",
-      "status": 429,
+      "status": 200,
       "statusText": "",
-      "duration": 322,
+      "duration": 353,
       "passed": true,
-      "isRateLimited": true,
+      "isRateLimited": false,
       "expectedStatuses": [
         200
       ],
       "responseBody": {
-        "error": "rate_limit_exceeded",
-        "message": "You've hit the anonymous demo limit of 40 requests/day from this IP.",
-        "signup": {
-          "message": "Create a free account for a higher daily limit, your own API key, persistent collections, and auth.",
-          "url": "https://app.reqres.in/sign-up?source=demo_rate_limit"
-        },
-        "limit": 40,
-        "remaining": 0,
-        "reset_at": 1791676800,
-        "resets_in": "22h 36m",
-        "reset_explanation": "Limits reset daily at midnight UTC",
+        "token": "QpwL5tke4Pnpja7X4",
         "_meta": {
           "powered_by": "ReqRes",
           "docs_url": "https://app.reqres.in/documentation",
           "upgrade_url": "https://app.reqres.in/upgrade",
           "example_url": "https://app.reqres.in/examples/notes-app",
           "variant": "v1_a",
-          "message": "Rate limited to keep ReqRes free. Projects unlock higher limits + logs.",
+          "message": "Your data persists here. Add auth, logs, and custom schemas to build a real backend.",
           "cta": {
-            "label": "Upgrade",
-            "url": "https://app.reqres.in/upgrade"
+            "label": "See example app",
+            "url": "https://app.reqres.in/examples/notes-app"
           },
-          "context": "rate_limited"
+          "context": "legacy_success"
         }
       }
     },
@@ -481,78 +447,96 @@
       "name": "POST - Login Fallido (Sin Password)",
       "method": "POST",
       "url": "https://reqres.in/api/login?api_key=pub_2da57b437efbad555deb2c2e4360f55fa944ea68bb437ad6a82d38bda82d16d7",
-      "status": 429,
+      "status": 400,
       "statusText": "",
-      "duration": 329,
+      "duration": 349,
       "passed": true,
-      "isRateLimited": true,
+      "isRateLimited": false,
       "expectedStatuses": [
         400,
         404
       ],
       "responseBody": {
-        "error": "rate_limit_exceeded",
-        "message": "You've hit the anonymous demo limit of 40 requests/day from this IP.",
-        "signup": {
-          "message": "Create a free account for a higher daily limit, your own API key, persistent collections, and auth.",
-          "url": "https://app.reqres.in/sign-up?source=demo_rate_limit"
-        },
-        "limit": 40,
-        "remaining": 0,
-        "reset_at": 1791676800,
-        "resets_in": "22h 36m",
-        "reset_explanation": "Limits reset daily at midnight UTC",
-        "_meta": {
-          "powered_by": "ReqRes",
-          "docs_url": "https://app.reqres.in/documentation",
-          "upgrade_url": "https://app.reqres.in/upgrade",
-          "example_url": "https://app.reqres.in/examples/notes-app",
-          "variant": "v1_a",
-          "message": "Rate limited to keep ReqRes free. Projects unlock higher limits + logs.",
-          "cta": {
-            "label": "Upgrade",
-            "url": "https://app.reqres.in/upgrade"
-          },
-          "context": "rate_limited"
-        }
+        "error": "Missing password"
       }
     },
     {
       "name": "GET - Respuesta Diferida (3 segundos)",
       "method": "GET",
       "url": "https://reqres.in/api/users?delay=3&api_key=pub_2da57b437efbad555deb2c2e4360f55fa944ea68bb437ad6a82d38bda82d16d7",
-      "status": 429,
+      "status": 200,
       "statusText": "",
-      "duration": 6330,
+      "duration": 6358,
       "passed": true,
-      "isRateLimited": true,
+      "isRateLimited": false,
       "expectedStatuses": [
         200
       ],
       "responseBody": {
-        "error": "rate_limit_exceeded",
-        "message": "You've hit the anonymous demo limit of 40 requests/day from this IP.",
-        "signup": {
-          "message": "Create a free account for a higher daily limit, your own API key, persistent collections, and auth.",
-          "url": "https://app.reqres.in/sign-up?source=demo_rate_limit"
+        "page": 1,
+        "per_page": 6,
+        "total": 12,
+        "total_pages": 2,
+        "data": [
+          {
+            "id": 1,
+            "email": "george.bluth@reqres.in",
+            "first_name": "George",
+            "last_name": "Bluth",
+            "avatar": "https://reqres.in/img/faces/1-image.jpg"
+          },
+          {
+            "id": 2,
+            "email": "janet.weaver@reqres.in",
+            "first_name": "Janet",
+            "last_name": "Weaver",
+            "avatar": "https://reqres.in/img/faces/2-image.jpg"
+          },
+          {
+            "id": 3,
+            "email": "emma.wong@reqres.in",
+            "first_name": "Emma",
+            "last_name": "Wong",
+            "avatar": "https://reqres.in/img/faces/3-image.jpg"
+          },
+          {
+            "id": 4,
+            "email": "eve.holt@reqres.in",
+            "first_name": "Eve",
+            "last_name": "Holt",
+            "avatar": "https://reqres.in/img/faces/4-image.jpg"
+          },
+          {
+            "id": 5,
+            "email": "charles.morris@reqres.in",
+            "first_name": "Charles",
+            "last_name": "Morris",
+            "avatar": "https://reqres.in/img/faces/5-image.jpg"
+          },
+          {
+            "id": 6,
+            "email": "tracey.ramos@reqres.in",
+            "first_name": "Tracey",
+            "last_name": "Ramos",
+            "avatar": "https://reqres.in/img/faces/6-image.jpg"
+          }
+        ],
+        "support": {
+          "url": "https://benhowdle.im/first-cto-playbook?utm_source=reqres&utm_medium=json&utm_campaign=referral",
+          "text": "Become a better CTO. A playbook of painful stories and practical advice from a two-time startup CTO."
         },
-        "limit": 40,
-        "remaining": 0,
-        "reset_at": 1791676800,
-        "resets_in": "22h 36m",
-        "reset_explanation": "Limits reset daily at midnight UTC",
         "_meta": {
           "powered_by": "ReqRes",
           "docs_url": "https://app.reqres.in/documentation",
           "upgrade_url": "https://app.reqres.in/upgrade",
           "example_url": "https://app.reqres.in/examples/notes-app",
           "variant": "v1_a",
-          "message": "Rate limited to keep ReqRes free. Projects unlock higher limits + logs.",
+          "message": "Your data persists here. Add auth, logs, and custom schemas to build a real backend.",
           "cta": {
-            "label": "Upgrade",
-            "url": "https://app.reqres.in/upgrade"
+            "label": "See example app",
+            "url": "https://app.reqres.in/examples/notes-app"
           },
-          "context": "rate_limited"
+          "context": "legacy_success"
         }
       }
     }
