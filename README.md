@@ -152,17 +152,40 @@ Todas las evidencias de ejecución están disponibles en la carpeta [`evidencias
 - **Reportes HTML:** Reportes interactivos de Cucumber
 - **Tasa de éxito:** 100% (36/36 pruebas pasadas)
 
-### Reportes Interactivos
+### Reportes Interactivos (Online & Local)
 
-**Cypress:**
-- [Ver Reporte HTML](./evidencias/cypress/cucumber-report/cucumber-report.html)
-- 18 escenarios ejecutados
-- Cobertura completa de funcionalidad de login
+> [!TIP]
+> **Dashboard Online en GitHub Pages:** Accede a la visualización interactiva y renderizada de todos los reportes en vivo con un solo clic:  
+> 🌐 **[https://merxxotas.github.io/prueba-tecnica-somos-makers/](https://merxxotas.github.io/prueba-tecnica-somos-makers/)**
 
-**Playwright:**
-- [Ver Reporte HTML](./evidencias/playwright/cucumber-report/cucumber-report.html)
-- 18 escenarios ejecutados  
-- Incluye screenshots automáticos en cada paso
+#### Enlaces Directos en GitHub Pages:
+- 🌲 **Cypress (Cucumber HTML):** [Ver Reporte Cypress Online](https://merxxotas.github.io/prueba-tecnica-somos-makers/cypress/cucumber-report.html)
+- 🎭 **Playwright (Cucumber HTML):** [Ver Reporte Playwright Online](https://merxxotas.github.io/prueba-tecnica-somos-makers/playwright/cucumber-report.html)
+- 🎭 **Playwright (Reporte Nativo):** [Ver Reporte Playwright Nativo](https://merxxotas.github.io/prueba-tecnica-somos-makers/playwright-report/index.html)
+- ⚡ **API ReqRes (JSON):** [Ver Reporte de API](https://merxxotas.github.io/prueba-tecnica-somos-makers/api/test-report.json)
+
+#### Visualización Local:
+Al navegar archivos `.html` directamente en la web de GitHub, la plataforma muestra el código fuente plano por motivos de seguridad. Para verlos renderizados en local:
+
+1. **Abrir directamente en navegador:**
+   ```bash
+   # Linux
+   xdg-open evidencias/cypress/cucumber-report/cucumber-report.html
+   # macOS
+   open evidencias/cypress/cucumber-report/cucumber-report.html
+   # Windows
+   start evidencias/cypress/cucumber-report/cucumber-report.html
+   ```
+
+2. **Servidor local rápido:**
+   ```bash
+   pnpm dlx serve evidencias
+   ```
+
+3. **Reporte nativo de Playwright:**
+   ```bash
+   pnpm exec playwright show-report automatizacion-web-playwright/playwright-report
+   ```
 
 ### Selección de Evidencias Clave
 
