@@ -24,9 +24,10 @@ const collection = JSON.parse(fs.readFileSync(collectionPath, 'utf8'));
 
 // Extraer configuración
 const baseEnv = collection.resources.find(r => r._id === 'env_base');
+const fallbackEnv = collection.resources.find(r => r._id === 'env_fallback');
 const baseURL = process.env.REQRES_BASE_URL || baseEnv?.data?.baseURL || 'https://reqres.in';
 const apiKey = process.env.REQRES_API_KEY || baseEnv?.data?.publicKey || '';
-const fallbackApiKey = process.env.REQRES_API_KEY_FALLBACK || '';
+const fallbackApiKey = process.env.REQRES_API_KEY_FALLBACK || fallbackEnv?.data?.publicKey || 'pub_415f86aadf410b4f5366ae22a4b444ade5921655d83910d720fa2c34cc839564';
 const requests = collection.resources.filter(r => r._type === 'request');
 const folders = collection.resources.filter(r => r._type === 'request_group');
 
